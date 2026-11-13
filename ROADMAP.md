@@ -11,7 +11,7 @@ because its associated lab works.
 Use independent attempts with agent checkpoints under [AGENTS.md](AGENTS.md).
 Clarification does not authorize solutions. Approve each milestone's lab scope
 and validation plan before creating it. The overall roadmap and the lab scopes
-for Milestones 1-7 are approved. Later lab ideas below are provisional.
+for Milestones 1-8 are approved. Later lab ideas below are provisional.
 
 Primary goals define the milestone. Ancillary goals support it and should be
 studied when a gap appears. Keep supplementary reading selective. Use varied
@@ -129,9 +129,12 @@ exact exercise references against the learner's copies before assigning them.
 - **Primary:** infinite graph techniques, paths and ends, connectivity and
   matching, recursive structures, cycle spaces, and limits.
 - **Ancillary:** finite versus infinite arguments and limits of computation.
-- **Lab:** finite approximations paired with proof investigations; no claim that
-  a finite experiment settles an infinite statement.
+- **Lab:** [infinite graphs through finite windows](labs/08-infinite/exercise.md),
+  supplemented by a [full Chapter 8 checklist](labs/08-infinite/reading.md).
+  Finite truncation and deletion are learner tasks; infinite claims require
+  separate proof investigations.
 - **Checkpoint:** identify where arguments require finiteness or an infinite method.
+- **Status:** lab scope approved; scaffold created; learner completion not assessed.
 
 ### 9. Ramsey theory and Hamilton cycles
 
