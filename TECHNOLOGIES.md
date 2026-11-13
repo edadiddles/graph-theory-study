@@ -7,6 +7,14 @@ For example, using a shortest-path implementation to investigate a spectral
 distance bound is appropriate when shortest-path construction is not the task.
 You must still explain what distance means and why the algorithm applies.
 
+Lab numbers in this document identify the original source packages. The revised
+[roadmap](ROADMAP.md) and [coverage crosswalk](COVERAGE.md) define adopted smaller
+learning units without renaming those directories. Follow
+[ASSESSMENT.md](ASSESSMENT.md) for objective-specific readiness: a technology
+extension does not bypass a core assessment. Budget assigned technology work
+explicitly; a distinct technology objective can have its own reviewed unit
+instead of increasing a mathematics unit beyond its estimated effort range.
+
 The technology-extension documentation is approved. Exact dependency versions,
 environment changes, runnable extension scaffolds, and Neo4j setup remain a
 separate step. No new packages, servers, data downloads, or runtime services

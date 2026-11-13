@@ -90,6 +90,12 @@ correct.
 
 ## Libraries and technology extensions
 
+Existing lab directory numbers refer to source exercise packages. The revised
+M-IDs in [ROADMAP.md](ROADMAP.md) identify adopted smaller learning units; use
+[COVERAGE.md](COVERAGE.md) to map between them. Milestone-boundary approval and
+lab-file preparation do not establish learner readiness. Preserve existing
+code, tests, notes, and behavioral contracts during this documentation redesign.
+
 Use the task's learning objective to decide which operations the learner must
 implement or derive and which may be delegated. Do not require reimplementing
 an algorithm merely because a later application uses it. A supporting library
@@ -117,3 +123,43 @@ reading completion. Extension plans do not authorize package installation,
 database creation, or changes to core tests. Dependency versions and Neo4j
 setup remain a separate approved step; the learner creates environments when
 reaching the relevant work. Keep this study-specific guidance in this project.
+
+## Diagnostics, exercise selection, and assessment
+
+Follow [ASSESSMENT.md](ASSESSMENT.md). Size learning units initially around
+4-6 active hours, with short-session stopping points; recalibrate using actual
+experience. Use ranges and flag uncertainty. Full reading and supplied-proof
+coverage remain required when a unit is split. After an interruption, check
+relevant prior knowledge and assign focused refresh work rather than assuming
+either complete retention or a need to restart.
+
+Before each milestone, diagnose the prerequisites it needs and state required
+objectives at explain, apply, or justify/prove depth. Select textbook exercises
+as the agent using the learner's diagnostic, prior attempts, and learning path.
+Verify identifiers and statements against the assigned edition; when access is
+insufficient, ask for relevant exercise pages rather than inventing references
+or assigning the selection back to the learner. Use [SUPPLEMENTS.md](SUPPLEMENTS.md)
+for targeted books, lectures, or practice. Prefer owned physical books where
+they fit; use only legitimate author, publisher, or institution-provided copies.
+Recommend purchases for a demonstrated purpose, not as automatic prerequisites.
+
+Generate quiz questions when the learner is ready. Publish objectives, intended
+depth, permitted aids, and a coverage blueprint before study, but do not preload
+questions, answers, or worked solutions into material needed to begin. Assess
+closed-book reasoning first, followed by a separate open-book application task.
+Open-book work retains the task-specific library and agent-assistance boundaries.
+
+During an assessment, clarify wording without hints or solutions. If substantive
+help is needed, record that attempt as assisted practice, apply gradual help,
+and later use a fresh comparable independent assessment. Record observations
+against each required objective; do not let aggregate marks conceal an unmet
+objective or mistake uncertain grading for evidence of a learner error.
+
+Do not advance to the next learning milestone while a required objective is
+unmet or its assessment remains pending. Give focused review and practice,
+then reassess at the declared depth. Treat minor slips and conceptual gaps
+differently while verifying corrections. Further difficulty may require a
+narrower unit or a different explanation, not a silently lowered requirement.
+The learner can explicitly revise the study policy; frustration or a request
+for clarification is not such a revision. Keep course-specific assessment
+guidance in this project rather than generalizing it into global workflow rules.

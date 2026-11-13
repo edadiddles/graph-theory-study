@@ -134,3 +134,11 @@ Similarity scoring, blocking, probabilistic matching, real datasets, visualizati
 libraries, and performance optimization belong to later approved work. Invalid
 vertices, malformed edges, self-loops, duplicate inputs, and adversarial data are
 outside this first function's input contract.
+
+## M01 entry point
+
+Use the [M01 learning card](notes.md#m01-learning-card-agent-prepared) to begin
+with the prerequisite diagnostic, finalize agent-selected textbook work, and
+follow the session plan and mixed-assessment blueprint. The core exercise above
+remains independent learner work. Advancement follows objective-specific readiness
+under [ASSESSMENT.md](../../ASSESSMENT.md).
