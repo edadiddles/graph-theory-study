@@ -11,7 +11,7 @@ because its associated lab works.
 Use independent attempts with agent checkpoints under [AGENTS.md](AGENTS.md).
 Clarification does not authorize solutions. Approve each milestone's lab scope
 and validation plan before creating it. The overall roadmap and the lab scopes
-for Milestones 1-8 are approved. Later lab ideas below are provisional.
+for Milestones 1-9 are approved. Later lab ideas below are provisional.
 
 Primary goals define the milestone. Ancillary goals support it and should be
 studied when a gap appears. Keep supplementary reading selective. Use varied
@@ -141,8 +141,12 @@ exact exercise references against the learner's copies before assigning them.
 - **Reading:** Diestel Chapters 9 and 10 in full.
 - **Primary:** Ramsey results and bounds; Hamilton-cycle existence criteria.
 - **Ancillary:** necessary versus sufficient conditions and computational search.
-- **Lab:** small Ramsey investigations and route-cycle examples.
+- **Lab:** [unavoidable patterns and visiting every location](labs/09-ramsey-hamilton/exercise.md),
+  supplemented by a [full Chapters 9-10 checklist](labs/09-ramsey-hamilton/reading.md).
+  Witness search is learner work; general bounds, hypotheses, and absence claims
+  require separate mathematical arguments.
 - **Checkpoint:** distinguish existence, construction, and optimization.
+- **Status:** lab scope approved; scaffold created; learner completion not assessed.
 
 ### 10. Random graphs
 
