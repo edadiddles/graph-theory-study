@@ -11,7 +11,7 @@ because its associated lab works.
 Use independent attempts with agent checkpoints under [AGENTS.md](AGENTS.md).
 Clarification does not authorize solutions. Approve each milestone's lab scope
 and validation plan before creating it. The overall roadmap and the lab scopes
-for Milestones 1-12 are approved. Later lab ideas below are provisional.
+for Milestones 1-13 are approved. Later lab ideas below are provisional.
 
 Primary goals define the milestone. Ancillary goals support it and should be
 studied when a gap appears. Keep supplementary reading selective. Use varied
@@ -201,9 +201,13 @@ exact exercise references against the learner's copies before assigning them.
 - **Primary:** graph Laplacians, isoperimetric problems, diameters, paths, flows,
   and routing through spectral methods.
 - **Ancillary:** normalization conventions, Markov chains, and numerical eigensolvers.
-- **Lab:** spectral partitioning and random-walk experiments; revisit the
-  distinction between communities and entities.
+- **Lab:** [normalized operators, partitions, and random walks](labs/13-spectral-foundations/exercise.md),
+  supplemented by a [full Chung Chapters 1-4 checklist](labs/13-spectral-foundations/reading.md).
+  Operator assembly and conductance are learner tasks; spectral partitions and
+  walk analysis revisit the distinction between communities and entities.
 - **Checkpoint:** state assumptions and interpret spectral results in the model.
+- **Status:** lab scope approved; scaffold created; numerical execution and learner
+  completion not assessed. Uses the existing NumPy pin; setup remains learner work.
 
 ### 14. Quasi-randomness, expanders, symmetry, and boundaries
 
