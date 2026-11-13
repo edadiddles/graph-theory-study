@@ -11,7 +11,7 @@ because its associated lab works.
 Use independent attempts with agent checkpoints under [AGENTS.md](AGENTS.md).
 Clarification does not authorize solutions. Approve each milestone's lab scope
 and validation plan before creating it. The overall roadmap and the lab scopes
-for Milestones 1-10 are approved. Later lab ideas below are provisional.
+for Milestones 1-11 are approved. Later lab ideas below are provisional.
 
 Primary goals define the milestone. Ancillary goals support it and should be
 studied when a gap appears. Keep supplementary reading selective. Use varied
@@ -169,11 +169,15 @@ exact exercise references against the learner's copies before assigning them.
 - **Primary:** well-quasi-ordering, tree decompositions, tree-width, tangles, and
   the graph minor theorem as developed in the book.
 - **Ancillary:** structural representations and algorithmic implications.
-- **Lab:** decomposition investigations plus a synthesis of earlier models.
+- **Lab:** [tree decompositions and graph-minor investigations](labs/11-decompositions/exercise.md),
+  supplemented by a [full Chapter 12 checklist](labs/11-decompositions/reading.md)
+  and a [Diestel consolidation record](labs/11-decompositions/consolidation.md).
+  Validity and width are learner tasks; minimum tree-width is not computed.
 - **Checkpoint:** complete all Diestel section/proof checkpoints and selected
   exercises before beginning the Chung sequence. Acknowledge any proofs the
   book cites rather than supplies; do not invent a requirement to reconstruct
   external proofs.
+- **Status:** lab scope approved; scaffold created; learner completion not assessed.
 
 ### 12. Linear algebra and physics bridge
 
