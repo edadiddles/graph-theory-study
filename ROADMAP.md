@@ -11,7 +11,7 @@ because its associated lab works.
 Use independent attempts with agent checkpoints under [AGENTS.md](AGENTS.md).
 Clarification does not authorize solutions. Approve each milestone's lab scope
 and validation plan before creating it. The overall roadmap and the lab scopes
-for Milestones 1-13 are approved. Later lab ideas below are provisional.
+for Milestones 1-14 are approved. Later lab ideas below are provisional.
 
 Primary goals define the milestone. Ancillary goals support it and should be
 studied when a gap appears. Keep supplementary reading selective. Use varied
@@ -216,9 +216,14 @@ exact exercise references against the learner's copies before assigning them.
   and eigenvalues with boundary conditions.
 - **Ancillary:** algebra and probability refreshers as needed; structural versus
   spectral comparisons.
-- **Lab:** compare graph families and boundary choices; choose the exact
-  experiment after the prerequisite review.
+- **Lab:** [graph comparisons, symmetry, and paired boundary models](labs/14-families-boundaries/exercise.md),
+  supplemented by a [full-chapter review and section-inventory record](labs/14-families-boundaries/reading.md).
+  Signed cut discrepancy and boundary operators are learner tasks; family-level
+  claims and construction guarantees require separate mathematical arguments.
 - **Checkpoint:** connect proved spectral properties to observed behavior.
+- **Status:** lab scope approved; scaffold created; numerical execution and learner
+  completion not assessed. Original-copy section inventories remain to be filled;
+  chapter coverage is required in full. No setup or dependency changes performed.
 
 ### 15. Spectral analysis and advanced random walks
 
