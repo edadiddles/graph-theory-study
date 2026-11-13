@@ -11,7 +11,7 @@ because its associated lab works.
 Use independent attempts with agent checkpoints under [AGENTS.md](AGENTS.md).
 Clarification does not authorize solutions. Approve each milestone's lab scope
 and validation plan before creating it. The overall roadmap and the lab scopes
-for Milestones 1-6 are approved. Later lab ideas below are provisional.
+for Milestones 1-7 are approved. Later lab ideas below are provisional.
 
 Primary goals define the milestone. Ancillary goals support it and should be
 studied when a gap appears. Keep supplementary reading selective. Use varied
@@ -116,9 +116,12 @@ exact exercise references against the learner's copies before assigning them.
 - **Primary:** extremal subgraph and minor questions, regularity tools, and their
   applications as developed in the chapter.
 - **Ancillary:** counting, asymptotic reasoning, and constructive examples.
-- **Lab:** small extremal constructions and computational investigations, with
-  explicit separation between finite experiments and general proofs.
+- **Lab:** [triangle avoidance and small extremal constructions](labs/07-extremal/exercise.md),
+  supplemented by a [full Chapter 7 checklist](labs/07-extremal/reading.md).
+  Detection and construction are learner tasks on at most five vertices;
+  minor and regularity topics have separate mathematical investigations.
 - **Checkpoint:** explain the hypotheses and scope of the chapter's results.
+- **Status:** lab scope approved; scaffold created; learner completion not assessed.
 
 ### 8. Infinite graphs
 
