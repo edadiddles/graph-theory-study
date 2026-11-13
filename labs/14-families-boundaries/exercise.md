@@ -132,3 +132,12 @@ gradual-assistance policy for review and clarification.
 Large constructions, general automorphism algorithms, optimal discrepancy search,
 automatic family certification, extra numerical packages, graph-limit software,
 and production safeguards require later planning and approval.
+
+## Technology extension
+
+See [technology.md](technology.md) for the approved technology-study addition,
+including task-specific library permissions and validation prompts. The core
+exercise and tests above retain their existing scope. Technology setup and
+runnable extension work remain a separate step; this addition does not complete
+any learner work. Earlier deferred-work statements apply to the core exercise;
+the extension describes the additional planned scope explicitly.

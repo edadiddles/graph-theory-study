@@ -133,3 +133,12 @@ the project's tutoring instructions.
 Live package inspection, package installation, graph visualization packages,
 production input validation, large-scale optimization, and OSTEP deadlock
 experiments require later planning. This lab has no external service interactions.
+
+## Technology extension
+
+See [technology.md](technology.md) for the approved technology-study addition,
+including task-specific library permissions and validation prompts. The core
+exercise and tests above retain their existing scope. Technology setup and
+runnable extension work remain a separate step; this addition does not complete
+any learner work. Earlier deferred-work statements apply to the core exercise;
+the extension describes the additional planned scope explicitly.

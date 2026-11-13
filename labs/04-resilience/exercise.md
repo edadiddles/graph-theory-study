@@ -132,3 +132,12 @@ focused clarification and gradual assistance under the project tutoring rules.
 Real maps, routing services, capacities, costs, flow-based algorithms, automated
 path packing, weighted or directed resilience, probabilistic reliability,
 malformed-graph validation, and large-scale optimization require later approval.
+
+## Technology extension
+
+See [technology.md](technology.md) for the approved technology-study addition,
+including task-specific library permissions and validation prompts. The core
+exercise and tests above retain their existing scope. Technology setup and
+runnable extension work remain a separate step; this addition does not complete
+any learner work. Earlier deferred-work statements apply to the core exercise;
+the extension describes the additional planned scope explicitly.

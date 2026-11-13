@@ -87,3 +87,33 @@ Use small, inspectable examples first. For entity resolution, explicitly separat
 candidate-match edges, graph connectivity, and actual shared identity. Computing
 components correctly does not establish that the resulting entity groups are
 correct.
+
+## Libraries and technology extensions
+
+Use the task's learning objective to decide which operations the learner must
+implement or derive and which may be delegated. Do not require reimplementing
+an algorithm merely because a later application uses it. A supporting library
+operation may be used immediately once its inputs, assumptions, and output
+meaning are understood; algorithms that constitute the current exercise remain
+independent work under that exercise's contract.
+
+Follow [TECHNOLOGIES.md](TECHNOLOGIES.md) and the relevant lab's technology
+extension for specific permissions. Preserve the core learner functions and
+tests. A library call must not replace a required implementation, supply an
+unattempted proof, or disclose predictions through generated answers. Comparison
+with a solver for a core task waits until the learner's independent attempt,
+completed implementation, and corresponding reasoning have been reviewed.
+Apply the same restriction to API examples and source inspection that reveal
+the task's key steps. Unrelated library mechanics may be explained directly.
+
+For supporting algorithms, explain assumptions and implications without turning
+every dependency into another implementation exercise. Check representation
+changes explicitly, especially vertex identity, isolates, direction, weights,
+matrix ordering, and boundary conventions. Agreement between implementations
+is supporting evidence, not proof or confirmation of model adequacy.
+
+Record technology experiments and assistance separately from core lab and
+reading completion. Extension plans do not authorize package installation,
+database creation, or changes to core tests. Dependency versions and Neo4j
+setup remain a separate approved step; the learner creates environments when
+reaching the relevant work. Keep this study-specific guidance in this project.

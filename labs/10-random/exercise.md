@@ -134,3 +134,12 @@ Formal hypothesis testing, fitted-model uncertainty analysis, sophisticated null
 models, large datasets, directed or weighted models, plotting libraries, automated
 downloads, production input handling, and performance optimization require later
 planning and approval.
+
+## Technology extension
+
+See [technology.md](technology.md) for the approved technology-study addition,
+including task-specific library permissions and validation prompts. The core
+exercise and tests above retain their existing scope. Technology setup and
+runnable extension work remain a separate step; this addition does not complete
+any learner work. Earlier deferred-work statements apply to the core exercise;
+the extension describes the additional planned scope explicitly.

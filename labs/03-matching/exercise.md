@@ -129,3 +129,12 @@ Preparing these files does not mark any learner task complete.
 Similarity scoring, weighted matching, blocking, duplicate entities within a
 source, probabilistic decisions, real datasets, malformed-input validation,
 production storage, and large-scale optimization require later approved work.
+
+## Technology extension
+
+See [technology.md](technology.md) for the approved technology-study addition,
+including task-specific library permissions and validation prompts. The core
+exercise and tests above retain their existing scope. Technology setup and
+runnable extension work remain a separate step; this addition does not complete
+any learner work. Earlier deferred-work statements apply to the core exercise;
+the extension describes the additional planned scope explicitly.

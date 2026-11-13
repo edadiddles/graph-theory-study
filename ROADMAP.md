@@ -18,6 +18,29 @@ Primary goals define the milestone. Ancillary goals support it and should be
 studied when a gap appears. Keep supplementary reading selective. Use varied
 applications, with entity resolution as a recurring thread.
 
+## Technology practice
+
+The documentation scope for technology extensions is approved. Follow
+[TECHNOLOGIES.md](TECHNOLOGIES.md) for task-specific library permissions and
+representation checks. These additions accompany the existing labs; core
+implementation, proof, reading, and test requirements still apply. Record
+extension progress separately. Versions, package installation, Neo4j setup,
+and extension code/runtime validation remain pending a separate approved step.
+
+| Milestone | Technology practice |
+|---|---|
+| 2 | [NetworkX representation and Neo4j dependency queries](labs/02-dependencies/technology.md) |
+| 3 | [Neo4j candidate-link evidence and record identity](labs/03-matching/technology.md) |
+| 4 | [NetworkX resilience comparisons](labs/04-resilience/technology.md) |
+| 5 | [NetworkX coloring and planarity comparisons](labs/05-coloring/technology.md) |
+| 6 | [NetworkX capacity experiments](labs/06-flows/technology.md) |
+| 10 | [NetworkX ensembles and graph interchange](labs/10-random/technology.md) |
+| 12 | [NetworkX matrix conversion and SciPy sparse representation](labs/12-matrices/technology.md) |
+| 13 | [SciPy selected eigenpairs and supporting path algorithms](labs/13-spectral-foundations/technology.md) |
+| 14 | [NetworkX graph-family construction](labs/14-families-boundaries/technology.md) |
+| 15 | [SciPy sparse diffusion experiments](labs/15-heat-walks/technology.md) |
+| 16 | [Question-driven tool selection; optional igraph or Neo4j GDS](labs/16-independent-project/technology.md) |
+
 ## Core books
 
 - Richard J. Trudeau, *Introduction to Graph Theory*: refresher; edition not yet
