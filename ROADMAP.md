@@ -11,7 +11,7 @@ because its associated lab works.
 Use independent attempts with agent checkpoints under [AGENTS.md](AGENTS.md).
 Clarification does not authorize solutions. Approve each milestone's lab scope
 and validation plan before creating it. The overall roadmap and the lab scopes
-for Milestones 1-11 are approved. Later lab ideas below are provisional.
+for Milestones 1-12 are approved. Later lab ideas below are provisional.
 
 Primary goals define the milestone. Ancillary goals support it and should be
 studied when a gap appears. Keep supplementary reading selective. Use varied
@@ -187,8 +187,13 @@ exact exercise references against the learner's copies before assigning them.
   forms, orthogonality, spectral decomposition, and Rayleigh quotients.
 - **Ancillary:** normal modes, boundary conditions, conditioning, numerical error;
   probability and finite-state Markov-chain preparation.
-- **Lab:** spring and resistor networks, starting with hand-solvable examples.
+- **Lab:** [graph matrices, springs, and resistor networks](labs/12-matrices/exercise.md),
+  with a [targeted prerequisite checklist](labs/12-matrices/reading.md).
+  NumPy is approved and pinned in [requirements.txt](requirements.txt); the learner
+  will create the environment and install it when reaching the lab.
 - **Checkpoint:** connect structure, physical equations, and numerical results.
+- **Status:** lab scope approved; scaffold created; numerical execution and learner
+  completion not assessed. No environment creation or installation performed.
 
 ### 13. Spectral foundations and applications
 
