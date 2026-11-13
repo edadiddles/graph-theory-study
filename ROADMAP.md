@@ -11,7 +11,8 @@ because its associated lab works.
 Use independent attempts with agent checkpoints under [AGENTS.md](AGENTS.md).
 Clarification does not authorize solutions. Approve each milestone's lab scope
 and validation plan before creating it. The overall roadmap and the lab scopes
-for Milestones 1-15 are approved. Later lab ideas below are provisional.
+for Milestones 1-16 are approved. All sixteen lab scaffolds are prepared;
+learner completion is recorded separately.
 
 Primary goals define the milestone. Ancillary goals support it and should be
 studied when a gap appears. Keep supplementary reading selective. Use varied
@@ -250,9 +251,16 @@ exact exercise references against the learner's copies before assigning them.
 - **Primary:** formulate a question, justify a model, implement methods, validate
   results, and defend conclusions.
 - **Ancillary:** evaluation design, uncertain labels, sensitivity, reproducibility.
-- **Lab:** an independently selected application with a small exact case and a
+- **Lab:** [independent modeling project](labs/16-independent-project/exercise.md),
+  with a [project brief](labs/16-independent-project/project-brief.md),
+  [validation plan](labs/16-independent-project/validation-plan.md), and
+  [targeted reading record](labs/16-independent-project/reading.md).
+  Select an application, then design a small independently checkable case and a
   larger empirical case. Entity resolution remains an option.
 - **Checkpoint:** present a defensible modeling argument and remaining limitations.
+- **Status:** scope approved; project templates created; application selection,
+  implementation, validation, and learner completion not assessed. Project code
+  and tests await an agreed question and validation design.
 
 ## Reading and completion records
 
