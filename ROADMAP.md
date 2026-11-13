@@ -11,7 +11,7 @@ because its associated lab works.
 Use independent attempts with agent checkpoints under [AGENTS.md](AGENTS.md).
 Clarification does not authorize solutions. Approve each milestone's lab scope
 and validation plan before creating it. The overall roadmap and the lab scopes
-for Milestones 1 and 2 are approved. Later lab ideas below are provisional.
+for Milestones 1-3 are approved. Later lab ideas below are provisional.
 
 Primary goals define the milestone. Ancillary goals support it and should be
 studied when a gap appears. Keep supplementary reading selective. Use varied
@@ -63,10 +63,12 @@ exact exercise references against the learner's copies before assigning them.
 - **Primary:** bipartite and general matching, covering and packing, tree packing,
   arboricity, and path covers.
 - **Ancillary:** feasibility versus optimization; one-to-one matching assumptions.
-- **Lab:** cross-database record linkage, supplemented by mathematical
-  investigations for chapter topics not represented by that application.
+- **Lab:** [cross-database record linkage](labs/03-matching/exercise.md),
+  supplemented by a [full Chapter 2 checklist](labs/03-matching/reading.md) and
+  mathematical investigations for topics not represented by that application.
 - **Checkpoint:** justify assignment constraints and distinguish the chapter's
   different matching, covering, and packing questions.
+- **Status:** lab scope approved; scaffold created; learner completion not assessed.
 
 ### 4. Connectivity and resilience
 
