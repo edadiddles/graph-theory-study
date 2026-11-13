@@ -11,7 +11,7 @@ because its associated lab works.
 Use independent attempts with agent checkpoints under [AGENTS.md](AGENTS.md).
 Clarification does not authorize solutions. Approve each milestone's lab scope
 and validation plan before creating it. The overall roadmap and the lab scopes
-for Milestones 1-4 are approved. Later lab ideas below are provisional.
+for Milestones 1-5 are approved. Later lab ideas below are provisional.
 
 Primary goals define the milestone. Ancillary goals support it and should be
 studied when a gap appears. Keep supplementary reading selective. Use varied
@@ -90,8 +90,12 @@ exact exercise references against the learner's copies before assigning them.
 - **Primary:** plane and planar graphs, planarity criteria, duality, vertex and
   edge coloring, and the later coloring topics in the chapter.
 - **Ancillary:** drawings versus graphs; feasible versus optimal schedules.
-- **Lab:** conflict scheduling plus a separate spatial-network investigation.
+- **Lab:** [exam-conflict scheduling and manual planarity investigations](labs/05-coloring/exercise.md),
+  supplemented by a [full Chapters 4-5 checklist](labs/05-coloring/reading.md).
+  Conflict construction and minimum coloring are learner tasks; planarity is
+  assessed through separate drawings and mathematical arguments.
 - **Checkpoint:** explain the representation assumptions and justify bounds.
+- **Status:** lab scope approved; scaffold created; learner completion not assessed.
 
 ### 6. Flows
 
