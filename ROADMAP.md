@@ -11,7 +11,7 @@ because its associated lab works.
 Use independent attempts with agent checkpoints under [AGENTS.md](AGENTS.md).
 Clarification does not authorize solutions. Approve each milestone's lab scope
 and validation plan before creating it. The overall roadmap and the lab scopes
-for Milestones 1-3 are approved. Later lab ideas below are provisional.
+for Milestones 1-4 are approved. Later lab ideas below are provisional.
 
 Primary goals define the milestone. Ancillary goals support it and should be
 studied when a gap appears. Keep supplementary reading selective. Use varied
@@ -76,8 +76,12 @@ exact exercise references against the learner's copies before assigning them.
 - **Primary:** connectivity structure, separating sets, disjoint paths, Menger's
   theorem, and the chapter's further linking results.
 - **Ancillary:** bounds and certificates; structural versus operational resilience.
-- **Lab:** transport or communication failures with explicit vertex/edge meanings.
+- **Lab:** [station and connection failures](labs/04-resilience/exercise.md),
+  supplemented by a [full Chapter 3 checklist](labs/04-resilience/reading.md).
+  Learner tasks implement pairwise minimum separators; disjoint-path evidence
+  is manual.
 - **Checkpoint:** justify resilience claims and identify failures the model omits.
+- **Status:** lab scope approved; scaffold created; learner completion not assessed.
 
 ### 5. Planarity and coloring
 
