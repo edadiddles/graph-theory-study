@@ -10,8 +10,8 @@ because its associated lab works.
 
 Use independent attempts with agent checkpoints under [AGENTS.md](AGENTS.md).
 Clarification does not authorize solutions. Approve each milestone's lab scope
-and validation plan before creating it. The overall roadmap is approved; only
-Milestone 1's lab is approved so far. Later lab ideas below are provisional.
+and validation plan before creating it. The overall roadmap and the lab scopes
+for Milestones 1 and 2 are approved. Later lab ideas below are provisional.
 
 Primary goals define the milestone. Ancillary goals support it and should be
 studied when a gap appears. Keep supplementary reading selective. Use varied
@@ -49,10 +49,13 @@ exact exercise references against the learner's copies before assigning them.
 - **Primary:** precise definitions, short proofs, graph representations,
   traversal, reachability; introduce directed connectivity as supplementary work.
 - **Ancillary:** induction, invariants, correctness, and algorithm analysis.
-- **Lab:** software dependencies, cycles, and change impact; optional OSTEP case
-  on resource dependencies under explicit assumptions.
+- **Lab:** [directed software dependencies](labs/02-dependencies/exercise.md),
+  cycles, and potential change impact, with a separate
+  [full Chapter 1 reading checklist](labs/02-dependencies/reading.md).
+  The OSTEP resource-dependency case remains a later optional extension.
 - **Checkpoint:** state hypotheses accurately, reconstruct a short proof, and
   explain the limits of a dependency model.
+- **Status:** lab scope approved; scaffold created; learner completion not assessed.
 
 ### 3. Matching, covering, and packing
 
