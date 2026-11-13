@@ -11,7 +11,7 @@ because its associated lab works.
 Use independent attempts with agent checkpoints under [AGENTS.md](AGENTS.md).
 Clarification does not authorize solutions. Approve each milestone's lab scope
 and validation plan before creating it. The overall roadmap and the lab scopes
-for Milestones 1-9 are approved. Later lab ideas below are provisional.
+for Milestones 1-10 are approved. Later lab ideas below are provisional.
 
 Primary goals define the milestone. Ancillary goals support it and should be
 studied when a gap appears. Keep supplementary reading selective. Use varied
@@ -155,8 +155,12 @@ exact exercise references against the learner's copies before assigning them.
   thresholds, and second-moment reasoning.
 - **Ancillary:** conditional probability, expectation, variance, independence,
   simulation, and reproducibility.
-- **Lab:** observed networks versus explicitly chosen generated baselines.
+- **Lab:** [observed networks and independent-edge baselines](labs/10-random/exercise.md),
+  supplemented by a [full Chapter 11 checklist](labs/10-random/reading.md).
+  A [locally saved karate-club graph](labs/10-random/data/PROVENANCE.md) supplies
+  the observed data; generation, summaries, and ensemble analysis are learner work.
 - **Checkpoint:** explain what a baseline preserves and what conclusions it permits.
+- **Status:** lab scope approved; scaffold created; learner completion not assessed.
 
 ### 11. Graph minors and Diestel consolidation
 
