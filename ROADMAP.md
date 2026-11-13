@@ -11,7 +11,7 @@ because its associated lab works.
 Use independent attempts with agent checkpoints under [AGENTS.md](AGENTS.md).
 Clarification does not authorize solutions. Approve each milestone's lab scope
 and validation plan before creating it. The overall roadmap and the lab scopes
-for Milestones 1-5 are approved. Later lab ideas below are provisional.
+for Milestones 1-6 are approved. Later lab ideas below are provisional.
 
 Primary goals define the milestone. Ancillary goals support it and should be
 studied when a gap appears. Keep supplementary reading selective. Use varied
@@ -103,9 +103,12 @@ exact exercise references against the learner's copies before assigning them.
 - **Primary:** circulations, network flows, group-valued flows, flow-coloring
   duality, and the remaining results and conjectures presented in the chapter.
 - **Ancillary:** distinguish capacity, cost, latency, and reliability.
-- **Lab:** constrained distribution or service capacity; separate proof exercises
-  for material beyond the application.
+- **Lab:** [distribution capacity and bottlenecks](labs/06-flows/exercise.md),
+  supplemented by a [full Chapter 6 checklist](labs/06-flows/reading.md).
+  Maximum flow and minimum cut are learner tasks; broader algebraic flow
+  material has separate mathematical investigations.
 - **Checkpoint:** distinguish computed optima, proved results, and conjectures.
+- **Status:** lab scope approved; scaffold created; learner completion not assessed.
 
 ### 7. Extremal graph theory
 
