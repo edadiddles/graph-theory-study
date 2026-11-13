@@ -11,7 +11,7 @@ because its associated lab works.
 Use independent attempts with agent checkpoints under [AGENTS.md](AGENTS.md).
 Clarification does not authorize solutions. Approve each milestone's lab scope
 and validation plan before creating it. The overall roadmap and the lab scopes
-for Milestones 1-14 are approved. Later lab ideas below are provisional.
+for Milestones 1-15 are approved. Later lab ideas below are provisional.
 
 Primary goals define the milestone. Ancillary goals support it and should be
 studied when a gap appears. Keep supplementary reading selective. Use varied
@@ -232,9 +232,16 @@ exact exercise references against the learner's copies before assigning them.
 - **Primary:** Harnack inequalities, heat kernels, Sobolev inequalities, and
   advanced techniques for random walks.
 - **Ancillary:** required analysis, diffusion, and continuous/discrete comparisons.
-- **Lab:** diffusion and boundary experiments paired with analytical exercises.
+- **Lab:** [heat evolution and continuous-time walks](labs/15-heat-walks/exercise.md),
+  paired with analytical investigations, a [full Chapters 9-12 review record](labs/15-heat-walks/reading.md),
+  and a [Chung consolidation audit](labs/15-heat-walks/consolidation.md).
+  Heat kernels and transition matrices are learner tasks; physical coordinates,
+  probability conventions, and analytical inequalities require separate arguments.
 - **Checkpoint:** complete all Chung section/proof checkpoints and selected
   exercises, identifying where numerical evidence requires analytical support.
+- **Status:** lab scope approved; scaffold created; numerical execution and learner
+  completion not assessed. Original-copy section inventories for Chapters 5-12
+  remain pending. Uses existing NumPy; no environment or dependency changes.
 
 ### 16. Independent modeling project
 
