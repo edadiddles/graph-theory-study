@@ -11,8 +11,9 @@ exercise choices, quiz questions, and local scopes are finalized when reaching
 each milestone. All learner completion remains unassessed.
 
 M01 has a [prepared learning card](labs/01-connectivity/notes.md#m01-learning-card-agent-prepared),
-ready for its prerequisite diagnostic. Textbook exercise references await that
-diagnostic and verified access to the learner's edition. Later units are mapped
+with its initial prerequisite diagnostic reviewed. Focused preparation and
+one Eccles exercise are assigned in the notes; Trudeau Exercises 5 and 11 are
+verified from the learner's photographs and assigned there as well. Later units are mapped
 but not locally prepared. The later Chung boundaries remain conditional on
 original-copy inventories and effort calibration.
 
@@ -22,7 +23,8 @@ appendix work as needed. The revised grouping changes packaging, not coverage.
 Record cited results and conjectures accurately; external proofs are not silently
 added as obligations. See [COVERAGE.md](COVERAGE.md) for the section and lab map.
 
-Core books: Trudeau, *Introduction to Graph Theory* (edition not recorded);
+Core books: Trudeau, *Introduction to Graph Theory*, ISBN 9781684112319
+(chapter starts and selected exercise references supplied/verified from the learner's copy);
 Diestel, *Graph Theory*, sixth edition (2025), ISBN 9783662701065; Chung,
 *Spectral Graph Theory* (1997), ISBN 9780821803158. Check exact references against
 the learner's copies; the earlier record of awaited delivery is not a current
