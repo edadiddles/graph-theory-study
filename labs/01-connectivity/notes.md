@@ -63,8 +63,11 @@ M01 uses the whole existing
 [connectivity exercise](exercise.md) under the adopted
 [roadmap](../../ROADMAP.md) and [assessment policy](../../ASSESSMENT.md).
 
-**Status:** initial prerequisite diagnostic reviewed; focused preparation P01
-below is assigned. The learner supplied both book ISBNs, Trudeau chapter starts,
+**Status:** initial prerequisite diagnostic reviewed; P01's submitted truth-table
+exercise and focused implication check are accepted. Trudeau Exercise 5's
+induction justification and degree-condition counterexample are reviewed;
+Exercise 11 is the next independent task.
+The learner supplied both book ISBNs, Trudeau chapter starts,
 and exercise photographs. Eccles reading and one problem are selected; Trudeau
 Exercises 5 and 11 are verified and assigned in P02 below.
 Milestone objectives and the final quiz remain unassessed. M02 remains gated on
@@ -432,8 +435,10 @@ remain assigned; their graph predictions and proofs have not been supplied.
 
 #### M01-P01: focused implication refresher and selected exercise
 
-Status: assigned, not attempted or assessed in this record. This is preparation
-informed by D03, not the final milestone quiz. The learner supplied:
+Status: the submitted Problems I, Question 2 truth tables, explanation, and
+focused follow-up are reviewed and accepted. Reading completion
+has not been separately reported. This is preparation informed by D03, not the
+final milestone quiz. The learner supplied:
 
 - Trudeau, Introduction to Graph Theory: ISBN 9781684112319.
 - Eccles, An Introduction to Mathematical Reasoning: ISBN 9780521597180.
@@ -514,7 +519,8 @@ the actual photographed statements, not the contents alone.
 
 #### M01-P02: selected Trudeau graph and proof exercises
 
-Status: assigned; no attempts, results, or readiness outcomes recorded. The
+Status: Exercise 5 work and feedback are recorded below; Exercise 11 remains
+assigned without a submitted attempt. No milestone readiness outcome is recorded. The
 learner supplied four local photographs, all inspected directly:
 
 | Source image | Visible material used to verify selection |
@@ -568,3 +574,109 @@ Review checks: definition/drawing consistency and the scope of the general
 argument in Exercise 5; the stated assumptions and validity of the proof in
 Exercise 11. Assessment records remain blank until actual attempts are supplied.
 Exercise completion alone does not establish all M01 objectives or permit M02.
+
+#### M01-P01 review: submitted Eccles truth tables
+
+The learner submitted a handwritten table for each of the three assigned
+statements: P implies Q; (P or Q) if and only if Q; and (P and Q) if and only
+if P. Each biconditional was calculated by conjoining its two directional
+implications. The four assignments to P and Q were included.
+
+Learner's accompanying explanation:
+
+> truth tables for eccles. the <=> is short hand for the bidirectional implication and is derived by 'and'ing the preceding two columns representing the  p->q and q->p. all three statements are equivalent because the resulting truth tables are equivalent
+
+Source: the current learner submission at
+`/mnt/c/Users/EdwardRuzek/Downloads/image0.jpeg`, inspected as the attached image.
+SHA256: `b7027039a475703a201f0f8fadcec71a13c0bf413808accfe1e997cb766e1c60`.
+This basename was reused: it now identifies the truth-table photograph rather
+than the earlier Trudeau pages 62-63 image inspected for P02. The P02 source
+table describes the earlier images at selection time; those filenames are not
+immutable document identifiers. No source images were copied into the repository.
+
+Review outcome: all displayed truth-value columns are correct, including the
+two implications and their conjunction for each biconditional. The three final
+columns agree on every assignment. The explanation therefore supplies a valid
+truth-table proof of the requested equivalence. No correction to this exercise
+is needed. This was submitted study work with references permitted, not the
+closed-book milestone quiz. No independent-reading completion or active time
+is inferred from the photograph.
+
+Focused follow-up, M01-P01-F01: suppose P implies Q is true, and P is false.
+What can be concluded about Q, and why?
+
+Learner response:
+
+> nothing. q could either be true or false
+
+Review: correct. Both truth values for Q are compatible with the stated
+conditions, as also shown in the learner's earlier implication table. The
+focused implication check is accepted without further hints or correction.
+No additional implication drill is indicated by this evidence. Continue to
+Trudeau Exercise 5, keeping proof structure under review as arguments are
+developed. This prerequisite check does not mark the final quiz or any of the
+eight M01 objectives ready; reading completion has not been separately reported.
+
+#### M01-P02-E05: path graphs, induction, and the degree-condition check
+
+Source: the learner's typed Exercise 5 discussion, including the submission
+after the 2026-11-16 environment update. This is assisted study work, not the
+final milestone quiz. Summaries describe the exchange; quoted responses retain
+the learner's wording.
+
+Initial work: described a path as a straight-line graph, discussed its endpoint
+and interior degrees, explicitly represented P2, P3, P4, and P5, and conjectured
+an edge count of v - 1. Gave the v = 2 base case and an induction sketch. The
+sketch wrote the desired formula for n + 1 before deriving the recurrence from it.
+The learner noted concern about the induction's rigor.
+
+Review: accepted the proposed count and base case; identified that using the
+target formula at n + 1 made the inductive step circular. Asked for a justification
+of e_(n+1) = e_n + 1 directly from the path-graph definition.
+
+Learner's justification:
+
+> yes, the "+1" follows directly from the definition where adding the next vertex v+1, creates only the edge {v,v+1}.
+
+Review: accepted this independent graph-based justification of the recurrence.
+Together with the learner's stated inductive hypothesis and algebra, it repairs
+the induction argument. In the final written record, the graph-based reason
+belongs before application of the inductive hypothesis; no replacement proof
+was supplied by the agent.
+
+Definition follow-up: the initial degree-only description did not require
+connectedness. Asked whether the degree conditions alone force connectedness.
+The learner initially argued that a cycle requires a vertex of degree at least
+three. The agent asked them to draw an isolated simple cycle and inspect its
+degrees; the learner then recognized that all its degrees can be two.
+
+The learner next considered two copies of a cycle with an attached degree-one
+vertex and correctly observed the resulting degree-three attachment vertices.
+Assistance: clarified that the two required degree-one vertices are a total for
+the whole graph, not one required in each component. Asked for a construction
+placing both degree-one vertices in the same component.
+
+Learner construction: path 1-2-3 together with the separate cycle 4-5-6-4.
+The accompanying degree labels mistakenly named 1 and 4 as degree one.
+Review corrected the degree-one labels to 1 and 3, accepted the structural
+counterexample, and requested relabeling to match the original endpoint labels
+1 and v with v = 6.
+
+Learner's final relabeling:
+
+> yes, the two disconnected subgraphs would be 1-2-6 and 3-4-5-3
+
+Review: accepted. The two components are separate; the degree-one vertices are
+1 and 6 and the other vertices have degree two. This refutes the claim that
+the degree pattern alone ensures connectedness. The agent did not supply the
+counterexample's vertex/edge construction. Record the cycle-degree check,
+global-versus-component clarification, and endpoint-label correction as assistance.
+
+Completion evidence: the induction justification and degree-condition follow-up
+are reviewed. All five requested path representations have not been explicitly
+submitted: the discussion shows P2-P5, with P6 still to include in the final
+Exercise 5 record. The counterexample's path 1-2-6 is not a six-vertex path.
+Keep that small completion item visible without requiring repetition of the
+already accepted reasoning. Exercise 11 can be attempted next within M01.
+No milestone objective or final-quiz result is marked ready from this assisted
+exchange. Reading completion and active time have not been separately reported.
