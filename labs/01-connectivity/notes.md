@@ -65,8 +65,10 @@ M01 uses the whole existing
 
 **Status:** initial prerequisite diagnostic reviewed; P01's submitted truth-table
 exercise and focused implication check are accepted. Trudeau Exercise 5's
-induction justification and degree-condition counterexample are reviewed;
-Exercise 11 is the next independent task.
+induction justification and degree-condition counterexample are reviewed, and
+the repaired Exercise 11 induction is accepted. The submitted P6 representation
+completes Exercise 5's five requested examples. The selected textbook exercise
+work is reviewed; the core lab begins with the model-in-my-own-words prompt.
 The learner supplied both book ISBNs, Trudeau chapter starts,
 and exercise photographs. Eccles reading and one problem are selected; Trudeau
 Exercises 5 and 11 are verified and assigned in P02 below.
@@ -519,8 +521,9 @@ the actual photographed statements, not the contents alone.
 
 #### M01-P02: selected Trudeau graph and proof exercises
 
-Status: Exercise 5 work and feedback are recorded below; Exercise 11 remains
-assigned without a submitted attempt. No milestone readiness outcome is recorded. The
+Status: Exercise 5's representations and proof work and the repaired Exercise 11
+induction are reviewed below. No milestone
+readiness outcome is recorded. The
 learner supplied four local photographs, all inspected directly:
 
 | Source image | Visible material used to verify selection |
@@ -673,10 +676,85 @@ counterexample's vertex/edge construction. Record the cycle-degree check,
 global-versus-component clarification, and endpoint-label correction as assistance.
 
 Completion evidence: the induction justification and degree-condition follow-up
-are reviewed. All five requested path representations have not been explicitly
-submitted: the discussion shows P2-P5, with P6 still to include in the final
-Exercise 5 record. The counterexample's path 1-2-6 is not a six-vertex path.
-Keep that small completion item visible without requiring repetition of the
-already accepted reasoning. Exercise 11 can be attempted next within M01.
+are reviewed. The original discussion explicitly represented P2-P5; after the
+Exercise 11 review the learner supplied the remaining P6 representation:
+
+> 1-2-3-4-5-6
+
+Review: accepted as P6. All five requested representations are now accounted
+for, and the selected Exercise 5 work is reviewed. The disconnected
+counterexample was a separate follow-up, not a P6 representation.
 No milestone objective or final-quiz result is marked ready from this assisted
 exchange. Reading completion and active time have not been separately reported.
+
+#### M01-P02-E11: degree-sum proof review
+
+Source: the learner's typed argument and subsequent focused exchanges. This is
+assisted study work in finite simple undirected graphs, not the final milestone
+quiz. No extension to directed graphs or other degree conventions was assessed.
+
+Initial argument: observed that an edge contributes one to the degrees of each
+endpoint and hence two to total vertex degree. Proposed induction on edge count
+with the single two-vertex, one-edge graph as base, then added an edge and used
+the degree increment to derive the desired expression. The learner later
+confirmed that "between two existing edges" was a typo for vertices, and that
+deg(G) was intended to denote the sum of all vertex degrees.
+
+First review: accepted the edge-contribution observation and algebra, but noted
+that the particular two-vertex base together with edge additions did not cover
+arbitrary finite vertex sets. Asked for a base including isolated vertices.
+
+The learner considered a sufficiently large vertex set, a second induction on
+vertices, and whether vertex count was relevant to the statement. Assistance:
+explained that a large-size restriction would leave other graphs uncovered;
+proposed fixing an arbitrary finite V and examining G0 = (V, empty edge set).
+
+Learner base-case response:
+
+> the edge count is 0 and total degree is 0. These do hold for any V.
+
+Review: accepted the base case. Assistance then made the inductive hypothesis
+universal over all graphs on V with n edges, selected an arbitrary H on V with
+n + 1 edges, and asked how to relate it to a graph covered by that hypothesis.
+
+The learner described H as a supergraph, initially of V, then corrected this
+to a supergraph of G with n edges. Assistance distinguished the vertex set
+from a graph and focused on constructing G from arbitrary H. After a hint to
+choose an edge of H, the learner proposed taking the edge set excluding one
+edge. The agent clarified the notation as E_G = E_H minus {r}, with the same V,
+and that r could be any edge rather than one with a known addition history.
+
+Learner's concluding inductive step:
+
+> then the sum(deg(H)) = sum(deg(G))+2 we know that sum(deg(G)) = 2n for n edges, thus sum(deg(H)) =2n + 2 = 2(n+1). since H adds a single edge to G, then number of edges in H is n+1.
+
+Review outcome: accepted. Together with the arbitrary-vertex-set zero-edge
+base, the universal hypothesis, and the construction of G from arbitrary H,
+the learner's degree-change argument establishes the result in the stated
+setting. The completed argument is assembled from the learner's contributions
+and explicitly recorded guidance; it is not classified as an independently
+constructed first-attempt proof. No replacement worked proof was written for
+the learner. No milestone objective or final-quiz result is marked ready from
+this review. Reading completion and active time were not separately reported.
+
+The final P6 completion request was subsequently satisfied in the Exercise 5
+record above. Both selected Trudeau exercises are reviewed, with assistance
+recorded. Proceed to the core connectivity lab's model and predictions before
+implementation; milestone objectives and final assessment remain unassessed.
+
+#### M01-L01: begin the connectivity model and predictions
+
+Status: task prepared; learner response pending. This is core lab study work,
+not the final quiz. The original learner working sections above remain unfilled
+until the learner supplies work.
+
+First task: read the core exercise's **Model and supplied data** section, then
+explain in the learner's own words the distinction between a record, a candidate
+match, and an entity in this lab. Use the existing **Model in my own words**
+section for that response. No model interpretation answer is supplied here.
+
+After reviewing that explanation, begin the scenario predictions from Part 1,
+using the supplied vertex inventory and candidate edges before running code.
+Keep graph connectivity, computational evidence, and identity assumptions
+distinct. No components, bridge/cut-vertex results, deletion outcomes, or learner
+implementation have been supplied by the agent.
