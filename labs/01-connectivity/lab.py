@@ -45,4 +45,36 @@ def connected_components(
     production safeguards, and performance optimization are deferred.
     """
     # Learner task: implement after recording predictions and proof attempts.
-    raise NotImplementedError("Implement connected_components for Lab 1.")
+    components = []
+    # iterate over edges to find and merge components
+    for edge in edges:
+        edge_a, edge_b = edge
+        # initialize component sets to include only the verticies of each edge
+        component_a, component_b = set(edge_a), set(edge_b)
+        idx_a, idx_b = -1, -1
+        # iterate over component index
+        # found components will be stored as a reference
+        for idx in range(len(components)):
+            # is the left vertex of the edge in a component
+            if edge_a in components[idx]:
+                idx_a = idx
+                component_a = components[idx]
+            # is the right vertex of the edge in a component
+            if edge_b in components[idx]:
+                idx_b = idx
+                component_b = components[idx]
+        # if the right vertex is in a component remove it from the comonent list
+        if idx_b > -1 and idx_a != idx_b:
+            components.pop(idx_b)
+
+        # union both edge components
+        component_a |= component_b
+
+        # if the left vertex is not a known component add it
+        if idx_a == -1:
+            components.append(component_a)
+
+    for vertex in vertices:
+        if not any(vertex in component for component in components):
+            components.append({vertex})
+    return components
