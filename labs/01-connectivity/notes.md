@@ -68,7 +68,25 @@ exercise and focused implication check are accepted. Trudeau Exercise 5's
 induction justification and degree-condition counterexample are reviewed, and
 the repaired Exercise 11 induction is accepted. The submitted P6 representation
 completes Exercise 5's five requested examples. The selected textbook exercise
-work is reviewed; the core lab begins with the model-in-my-own-words prompt.
+work is reviewed; the initial model explanation has received clarification.
+Scenario 1 component, bridge, cut-vertex, forest, and identity-label reasoning
+is reviewed; independent deletions are clarified. Scenario 2 component and
+identity-label predictions, bridge/cut-vertex classifications, and forest
+classification are reviewed.
+Deletion lists were flagged to retain F. The learner supplied a valid
+counterexample to the proposed cut-vertex/bridge implication. Scenario 3's
+component, identity-label, bridge/cut-vertex, and forest classifications are
+reviewed, along with the selected edge and vertex deletion predictions.
+Scenario 4's component, identity-label, bridge/cut-vertex, and cycle
+classifications and selected deletion component lists are reviewed. Scenario 5's
+component and structural classifications and selected deletions are reviewed;
+its identity-label comparison is also reviewed. The path-defined relation's
+three properties are justified after definition refresh and focused guidance.
+The grouping claim and additional identity condition are reviewed after
+terminology clarification and focused questions. The numerical similarity
+threshold counterexample is accepted after focused feedback on the implication's
+premise. Both structural-importance counterexamples are accepted. All four
+mathematical prompts have reviewed attempts; the learner implementation is next.
 The learner supplied both book ISBNs, Trudeau chapter starts,
 and exercise photographs. Eccles reading and one problem are selected; Trudeau
 Exercises 5 and 11 are verified and assigned in P02 below.
@@ -744,17 +762,669 @@ implementation; milestone objectives and final assessment remain unassessed.
 
 #### M01-L01: begin the connectivity model and predictions
 
-Status: task prepared; learner response pending. This is core lab study work,
-not the final quiz. The original learner working sections above remain unfilled
-until the learner supplies work.
+Status: initial response and clarification recorded below. This is core lab
+study work, not the final quiz. The original learner working sections above
+remain available for the learner's own consolidated notes.
 
 First task: read the core exercise's **Model and supplied data** section, then
 explain in the learner's own words the distinction between a record, a candidate
 match, and an entity in this lab. Use the existing **Model in my own words**
-section for that response. No model interpretation answer is supplied here.
+section for that response. The actual response and subsequent feedback are
+recorded separately below.
 
 After reviewing that explanation, begin the scenario predictions from Part 1,
 using the supplied vertex inventory and candidate edges before running code.
 Keep graph connectivity, computational evidence, and identity assumptions
-distinct. No components, bridge/cut-vertex results, deletion outcomes, or learner
-implementation have been supplied by the agent.
+distinct. No scenario result was supplied before the learner's corresponding
+prediction, and no learner implementation has been supplied by the agent.
+
+Learner's initial response:
+
+> a record would be an individual piece of data that describes an entity. a candidate match would be a record that is determined to be a match of with the current record. an entity would be, essentially, a collection of records. in this case, the records would be verticies, candidate matches are represented by edges, and the entity would represented as a connected graph. The entity that is being considered would be an identity
+
+Review: accepted the vertex/edge mapping. First clarified that a candidate
+match is a proposed link between records, not an established identity match.
+Asked what could safely be concluded about a component under that distinction.
+
+Learner response:
+
+> that it is a proposed identity/entity
+
+Review: accepted the provisional interpretation, with a terminology refinement:
+the component is a proposed grouping of records that may describe one person;
+the entity is the actual person being described. This feedback teaches the
+model distinction, not any specific scenario's connectivity or identity result.
+It is assisted preparation rather than independent final-assessment evidence.
+All eight milestone readiness entries remain unassessed.
+
+#### M01-L02: Scenario 1 component predictions
+
+Status: component, bridge, cut-vertex, and forest predictions reviewed below;
+identity-label comparison is reviewed in M01-L03; later scenarios remain pending. Supplied data from
+`lab.py`: V = {A, B, C, D, E, F} and undirected edges {A, B}, {B, C}, {D, E}.
+
+Task: draw the graph or describe it, predict its connected components, and
+explain the grouping from the given graph before computation. No component
+sets or expected counts are supplied here. Identity-label comparison, further
+structural/deletion questions, and implementation follow the core exercise's
+stages after the initial predictions; none is marked completed by this entry.
+
+Learner's component prediction:
+
+> we will have 3 disconnected pieces. A-B-C ; D-E ; F
+
+Review: accepted the three components, including the isolated vertex. Then
+asked which edges are bridges and requested justification before computation.
+
+Learner's bridge response:
+
+> all the edges are bridges. removing {A,B} causes A to become it's own component. Removing {B,C} causes B to become it's own component. Removed {D,E} cause D and E to become their own components
+
+Initial feedback accepted the classification and queried the claim about B
+after removal of {B, C}. The learner clarified:
+
+> A should remain connected to B since the edge set contains {A,B},{B,C}. This is in isolation of the previous removal of the edge {A,B}. If we assume that the removal {B,C} is performed after {A,B} is removed, then B would be it's own component as well
+
+Review: accepted the distinction. Independent removal of {B, C} leaves A
+connected to B; sequential removal after deleting {A, B} isolates B as well.
+The earlier question did not explicitly state whether the original graph was
+restored between checks. Do not classify the learner's sequential interpretation
+as a connectivity error. The all-edges-are-bridges classification is correct.
+
+Convention for these structural checks: evaluate each edge or vertex deletion
+independently from the original Scenario 1 graph. A vertex deletion removes that
+vertex and its incident edges. Explicitly identify any later cumulative-failure
+experiment as a separate task. This convention is local to the study exercise.
+
+Using that independent-deletion convention, the learner was asked to predict
+the cut vertices and justify the result. Learner response:
+
+> The only cut vertex is B. Removing B would create A and C as new components. Removing A, B-C would still be retained, and similarly removing C, A-B would still remain. for D-E, removing either just changes the component to a single vertex, removing D leaves E and removing E leaves D. and removal of F actually reduces the total component.
+
+Review: accepted B as the only cut vertex and the explanation for every vertex,
+including that deleting F reduces the component count and does not make F a cut
+vertex. No correction was needed. Then asked whether the whole graph was a tree,
+a forest, both, or neither, with justification from the definitions.
+
+Learner response:
+
+> I'm confused with the definition provided `A tree is a connected graph without cycles; a forest has no cycles.`. I take this to mean that a forest is just a graph with multiple components which are trees, but the provided definition doesn't require a forest to be disconnected. The provided graph is disconnected so it isn't a tree by definition. It is a forest since it has no cycles.
+
+Review: accepted the classification and the learner's correct observation that
+the forest definition does not require disconnectedness. Clarified that a forest
+can have a single component, in which case it is a tree; every component of a
+forest is a tree. Do not treat the request for clarification as an incorrect
+classification. The learner correctly identified Scenario 1 as acyclic and
+disconnected, hence a forest and not a tree.
+
+These are reviewed predictions before implementation, not results from running
+code or final-quiz evidence. All eight milestone readiness entries remain
+unassessed. Active time has not been measured.
+
+#### M01-L03: Scenario 1 identity-label comparison
+
+Status: learner comparison reviewed. Task: compare the learner's three
+predicted components with the synthetic `true_entity` labels in `lab.py`'s
+`RECORDS` table. State whether any proposed component combines different known
+identities or whether records for one known identity are split between components.
+Explain the comparison. The data labels were supplied inputs; no comparison
+outcome was supplied before the learner's response.
+
+Learner response:
+
+> for scenario 1, the components align to the true_entity data. person-1 should be the vertex set {A,B,C}, person-2 should be the vertex set {D,E} and person-3 should be the vertex set {F}
+
+Review: accepted the exact agreement between the three predicted components
+and the supplied identity groups. No known identity is split across components,
+and no component combines different known identities. No hint or correction was
+needed for this comparison. This is model interpretation practice using synthetic
+labels, not final-quiz evidence or an identity guarantee for an unlabelled real
+dataset. All eight milestone readiness entries remain unassessed.
+
+#### M01-L04: Scenario 2 component and identity predictions
+
+Status: component and identity-label predictions reviewed. Supplied task: use the same vertex set
+V = {A, B, C, D, E, F} and the same `RECORDS` identity labels. Scenario 2 adds
+{C, D} to Scenario 1, giving edges {A, B}, {B, C}, {C, D}, {D, E}.
+
+Before running code, predict the connected components and compare those groups
+with the supplied identity labels. Explain whether any known identities are
+combined or split. No Scenario 2 result was supplied before the response.
+
+Learner response:
+
+> There will now be only 2 connected components A-B-C-D-E ; F. This now joins person-1 and person-2 in the same component but doesn't impact person-3
+
+Review: accepted both predicted components and the identity comparison. The
+component containing A through E combines the supplied person-1 and person-2
+groups; F remains the separate person-3 group. No known identity is split.
+No hint or correction was needed. This is reviewed practice before computation,
+not final-quiz evidence. All eight readiness entries remain unassessed.
+
+#### M01-L05: Scenario 2 bridges and cut vertices
+
+Status: bridge and cut-vertex classifications reviewed; deletion lists omit F.
+Task: identify Scenario 2's bridges and cut vertices, explaining how deletion
+changes the components. Check each deletion independently from the original
+Scenario 2 graph. A vertex deletion also removes its incident edges. Predictions
+were requested before running code; no classification was supplied in advance.
+
+Learner response:
+
+> Now every edge is a bridge and the verticies B, C, D are cut verticies. removing the bridges creates the components (each bridge removal is delineated by |) A; B-C-D-E | A-B ; C-D-E | A-B-C ; D-E | A-B-C-D ; E. The cut vertices result in A ; C-D-E | A-B ; D-E | A-B-C ; E. One observation with this that I made is that the removal of a cut vertex also removes a bridge. I don't know if this is a guarantee of the cut vertex removal, but seems like it may be a meaningful observation
+
+Review: accepted all four edges as bridges and B, C, D as the cut vertices.
+Every listed split of A through E is correct for its corresponding independent
+deletion. The isolated component {F} must also be retained in every result;
+feedback flagged this omission without treating it as a wrong classification.
+The learner had already identified F as a separate component in M01-L04.
+
+The observation about deleting bridges holds for the cut vertices in this
+scenario. The learner explicitly left its generality open, rather than claiming
+a theorem. Follow up by investigating whether a graph can have a cut vertex
+with no incident bridges: try constructing an example or arguing why it would
+be impossible. This is the first exploratory prompt on the learner's question;
+no example or resolution of the general claim is supplied. It is practice
+arising from the learner's observation, not an additional milestone requirement.
+
+The learner's subsequent construction and its review are recorded in M01-L06.
+No implementation or final assessment has occurred. All eight readiness entries
+remain unassessed. Scenario 2's forest classification is reviewed in M01-L07.
+
+#### M01-L06: Learner's cut-vertex counterexample
+
+Status: construction and justification accepted. This follows the exploratory
+question in M01-L05, not a supplied counterexample or proof.
+
+Learner response:
+
+> Let's consider two graphs G and H which are isomorphic with the complete graph of 5 verticies K_5. Then let's construct a graph J such that a cut vertex v joins G and H. That is H-v-G. However, let's join v to H on 2 or more vertices and also v to G on 2 or more verticies. This construction creates v as a cut vertex, but since it is joined to each subgraph on 2 or more verticies. For the sake of argument let's consider verticies {4,v},{5,v} where 4,5 in V_{H}. {4,v} is not a bridge since it's removal doesn't disconnect K_5 from v because {5,v} still exists. A similar argument exists for the edge {5,v}. This is also the same line of reasoning for the construction to join v to G. Thus, the graph as constructed contains the cut vertex v which has no incident bridges
+
+Review: accepted, taking G and H as disjoint copies with no edges between them
+and v as the added connecting vertex. Deleting v separates those copies, so v
+is a cut vertex. The learner correctly uses the remaining attachment on each
+side and that clique's connectivity to show that deleting any single edge
+incident to v does not disconnect the graph. This establishes a cut vertex
+with no incident bridges and refutes the proposed general guarantee. No
+correction or replacement construction is needed.
+
+The learner supplied the construction and argument after the exploratory
+question; the agent supplied no example or construction hint. This is reviewed
+practice, not final-assessment evidence or an additional milestone requirement.
+All eight readiness entries remain unassessed.
+
+#### M01-L07: Scenario 2 tree/forest classification
+
+Status: learner classification and justification accepted. Task: return to Scenario 2's
+A-B-C-D-E component and isolated F. Classify the whole graph as a tree, a forest,
+both, or neither, with justification from the definitions. No classification was
+supplied before the learner's attempt.
+
+Learner response:
+
+> it has no cycles, so it is a forest. it is not connected, so it is not a tree.
+
+Review: accepted both the classification and its justification directly from the
+definitions. No hint or correction was needed. This is reviewed practice before
+computation, not final-assessment evidence. All eight readiness entries remain
+unassessed.
+
+#### M01-L08: Scenario 3 component and identity predictions
+
+Status: component, identity-label, and structural classifications reviewed.
+Supplied task: use V = {A, B, C, D, E, F},
+edges {A, B} and {D, E}, and the same `RECORDS` identity labels. Before running
+code, predict the connected components and compare them with the supplied
+identity groups, explaining any combinations or splits. No Scenario 3 result
+or implementation was supplied before the learner's attempt.
+
+Learner response:
+
+> the connected components are A-B ; C ; D-E ; F. this splits the known identity person-1 between the components A-B and C, the other two identity groups are not effected. Both edges {A,B} and {D,E} are bridges but there are no cut verticies. It is a forest since it has no cycles but it is not a tree since it is not connected.
+
+Review: accepted the four components and the split of person-1, with person-2
+and person-3 unaffected. Also accepted both edges as bridges, no cut vertices,
+and the forest/not-a-tree classification with its stated justification. The
+learner volunteered the structural classifications without a separate prompt.
+No correction or hint was needed. Specific component sets after selected
+deletions are the next task, recorded below. This is reviewed practice before
+computation, not final-assessment evidence; all eight readiness entries remain
+unassessed.
+
+#### M01-L09: Scenario 3 selected deletions
+
+Status: selected edge and vertex deletion predictions accepted. Task: choose one edge and
+one vertex from Scenario 3, and predict the components after each deletion.
+Treat the two deletions independently from the original Scenario 3 graph and
+include every remaining vertex. No result was supplied before the attempt.
+
+Learner response:
+
+> removing the edge {A,B} leaves the components A ; B ; C ; D-E ; F. Removing the edge B leaves the components A ; C ; D-E ; F
+
+Learner's immediate correction:
+
+> I meant vertex B, not edge B
+
+Review: accepted both component lists, interpreting the second deletion as
+vertex B as the learner explicitly corrected. Both lists retain every remaining
+vertex, including the isolated vertices. The terminology slip was self-corrected
+before feedback and does not indicate confusion between edge and vertex
+deletion. No hint or correction was needed for the results. The selected-deletion
+prediction task for Scenario 3 is reviewed; implementation and comparison with
+computed results remain pending. All eight readiness entries remain unassessed.
+
+#### M01-L10: Scenario 4 predictions
+
+Status: component, identity-label, and structural classifications accepted.
+Supplied task: use V = {A, B, C, D, E, F},
+edges {A, B}, {B, C}, {A, C}, {D, E}, and the same `RECORDS` identity labels.
+Before running code, predict the components and compare them with the identity
+groups. Identify bridges and cut vertices, and classify the whole graph as a
+tree, a forest, both, or neither, with brief reasons. No Scenario 4 result or
+implementation was supplied before the learner's attempt.
+
+Learner response:
+
+> There are still 3 components. they align with the correct identity groups. This time the person-1 identity group has an extra edge that joins A-C along with A-B-C. This creates a cycle in the graph, so it is no longer a forest and it's still not a tree. The only bridge is now {D,E} and there are no cut verticies. B was the original cut vertex, but with the inclusion of the edge {A,C}, the removal of B doesn't remove the connection between A and C.
+
+Review: accepted the three components and their agreement with the identity
+groups. The learner correctly identified the cycle, neither-tree-nor-forest
+classification, {D, E} as the only bridge, and no cut vertices. The explanation
+for why B ceases to be a cut vertex is correct. No correction or hint was needed.
+The effect of deleting B on A and C is explained; full component lists for that
+deletion and a selected edge deletion are the next task. This is reviewed
+practice before computation, not final-assessment evidence. All eight readiness
+entries remain unassessed.
+
+#### M01-L11: Scenario 4 selected deletions
+
+Status: selected deletion component lists accepted. Task: choose one edge
+from Scenario 4 and predict the components after its deletion. Also list the
+components after deleting B, the vertex already discussed by the learner.
+Evaluate the two deletions independently from the original Scenario 4 graph,
+including every remaining vertex. No deletion component list was supplied in
+advance.
+
+Learner response:
+
+> Removing edge {B,C} leaves the components C-A-B ; D-E ; F. Removing the vertex B leaves the components A-C ; D-E ; F.
+
+Review: accepted both results. The learner correctly represents the remaining
+edges in the A/B/C component after deleting {B, C}, and the remaining A/C
+component after deleting B. Both predictions retain the unaffected D/E and F
+components. No correction or hint was needed. These are reviewed predictions
+before computation; implementation, comparison with computed results, and the
+final assessment remain pending. All eight readiness entries remain unassessed.
+
+#### M01-L12: Scenario 5 predictions and selected deletions
+
+Status: component and structural classifications and selected deletions accepted;
+identity-label comparison accepted in M01-L13. Supplied task: use V = {A, B, C, D, E, F},
+edges {A, B}, {B, C}, {C, D}, {D, E}, {A, E}, and the same `RECORDS` identity
+labels. Before running code, predict the components and identity-group
+agreement, bridges and cut vertices, and the whole graph's tree/forest
+classification, with brief reasons. Choose one edge and one vertex, and list
+the components after each deletion independently from the original Scenario 5
+graph, including every remaining vertex. No Scenario 5 result or implementation
+was supplied before the learner's attempt.
+
+Learner response:
+
+> It's two components A-B-C-D-E-A ; F. Since the only component with edges is cyclic, none of the edges are bridges and none of the verticies are cut vertex. since the graph is cyclic, it is neither a tree nor a forest. If we remove the edge {C,D} then the resulting components are D-E-A-B-C ; F. If we remove the vertex C then the resulting components are D-E-A-B ; F.
+
+Review: accepted the two components, no bridges or cut vertices, and the
+neither-tree-nor-forest classification. Both selected deletion results are
+correct and retain F. The drawing specifies a single cycle on A through E;
+feedback makes that condition precise, since merely containing a cycle does
+not guarantee the absence of bridges or cut vertices in an arbitrary graph.
+This wording clarification does not change the accepted classifications or
+establish that the learner asserted a general theorem. No example or replacement
+argument was supplied. The identity-label comparison was not included in this
+response and is requested below. This is reviewed practice before computation,
+not final-assessment evidence. All eight readiness entries remain unassessed.
+
+#### M01-L13: Scenario 5 identity-label comparison
+
+Status: learner comparison accepted. Task: compare the predicted Scenario 5
+components with the same supplied `RECORDS` identity labels. State whether any
+known identity groups are combined or split. No comparison result was supplied
+before the learner's attempt.
+
+Learner response:
+
+> person-1 and person-2 are combined into a single component while person-3 is unaffected
+
+Review: accepted the combination of person-1 and person-2 and the unchanged
+person-3 component. No known identity is split. No correction or hint was needed.
+Scenario 5's predictions and identity comparison are reviewed. These remain
+practice before computation, not final-assessment evidence. All eight readiness
+entries remain unassessed.
+
+#### M01-L14: Path-defined relation
+
+Status: equivalence-relation argument accepted after definition refresh and
+focused guidance on reflexivity and transitivity.
+Let G be a simple undirected graph with vertex set V. Define a relation on V by u ~ v if
+and only if a path in G connects u and v, using the core exercise's path
+convention. Investigate whether this is an equivalence relation. Identify the
+properties that need to be checked and attempt to justify each claim for an
+arbitrary G, rather than only inspecting the five scenarios.
+
+This restates Part 2, prompt 1 of the existing exercise. The initial prompt
+supplied no verdict, list of properties, proof steps, or implementation.
+Subsequent clarification and assistance are recorded below.
+
+Learner's notation question:
+
+> how do i interpret u~ v
+
+Clarification: read u ~ v as "u is related to v"; here it means that a path in G
+connects the two vertices. No equivalence verdict or proof was supplied.
+
+Learner's definition question:
+
+> what is meant by equivalence relation?
+
+Clarification: supplied the definitions of reflexivity, symmetry, and
+transitivity, universally quantified over the set. Did not apply them to paths.
+
+Learner's request for help approaching the proof:
+
+> I'm not sure how to answer this. I don't believe the original statement is an equivalence relation, but I'm not sure how to approach the statement and assess for equivalence relation
+
+Assistance: first focused prompt was to check reflexivity alone, translating
+u ~ u as the existence of a path from u to itself and asking whether the lab's
+path definition makes this true for every vertex. The agent did not supply the
+length-zero-path justification or an overall verdict.
+
+Learner response:
+
+> I suppose this is true since a single vertex is permitted as a path of length zero. Thus any vertex has a path unto itself.
+
+Review: accepted the general reflexivity argument. The learner supplied the
+length-zero-path justification after the focused prompt; it applies to every
+vertex, including an isolated one. This is assisted proof practice, not an
+independent assessment. The full relation claim remains under investigation.
+All eight readiness entries remain unassessed.
+
+Symmetry task: assume u ~ v and determine whether v ~ u must hold, justifying
+the claim. No answer or path construction was supplied before the attempt.
+
+Learner response:
+
+> yes, symmetry must hold. if a path exists from u to v along undirected edges, then the same path exists for v to u.
+
+Review: accepted the symmetry argument. The learner correctly uses the
+undirected edges to traverse the path in reverse; no correction or substantive
+hint was needed for this property. The overall exercise remains assisted
+practice following the earlier definition refresh and reflexivity prompt,
+not an independent final assessment. All eight readiness entries remain
+unassessed.
+
+Transitivity task: assume u ~ v and v ~ w, and determine whether
+u ~ w must hold. Justify the answer using the path definition. No verdict,
+construction, or proof step was supplied for transitivity before the attempt.
+
+Learner response:
+
+> yes, transistivity will hold. if u~v and v~w exist, then u~w can be constructed by using the path u to v and then adding the path v to w.
+
+Review: the joining idea supplies a sequence of adjacent vertices from u to w,
+but the two paths may share vertices besides v. The joined sequence can repeat
+vertices, contrary to the lab's path definition. This is a gap in the proposed
+construction, not a disproof of the transitivity claim. The proof remains
+incomplete until that possibility is handled.
+
+Assistance: first focused feedback on transitivity identifies this overlap
+issue and asks how the joined sequence could be adjusted if a vertex repeats.
+No replacement construction, example, or repair step is supplied. The learner's
+response follows. All eight readiness entries remain unassessed.
+
+Learner's proposed repair:
+
+> if the paths for u~v and v~w intersect, let's say at some vertex x, then we could construct the path u along v until we get to x, then continue on the path from x to w. More formally, we could write something along the lines: suppose u~v and v~w. Assume the paths used to define the relation contain some vertex x. Then we can write the paths as u-x-v and v-x-w and construct the path u-x-w. thus u~w.
+
+Review: the learner supplies the switching construction. Its remaining gap is
+the choice of x: an arbitrary common vertex can leave another shared vertex
+in the retained u-to-x and x-to-w sections, so the resulting sequence might
+still repeat a vertex. The proposed construction needs a selection rule or
+argument ensuring that the retained sections intersect only at x. This is not
+a counterexample to the transitivity claim.
+
+Assistance: second focused feedback on transitivity asks the learner to make
+that choice of x precise. No particular selection rule, replacement proof, or
+counterexample diagram is supplied. The learner's response follows; the
+argument remains assisted practice. All eight readiness entries remain
+unassessed.
+
+Learner's precise selection:
+
+> x should be the first vertex shared when walking the path from u to v. this guarantees that any future vertex on the path from x to w is not shared with the path u to x
+
+Review: accepted the selection and its justification. Take x as the first
+vertex encountered on the u-to-v path that lies on the v-to-w path. Every
+vertex before x on the first path is absent from the second path, so the
+retained sections share only x. Each section already has no repeated vertices;
+their joining therefore gives the required path. The shared vertex exists
+because both original paths contain v. This confirms the learner's construction
+rather than supplying a replacement proof.
+
+Transitivity is now justified, along with the previously accepted reflexivity
+and symmetry, establishing that the relation is an equivalence relation. The
+learner supplied the final selection rule after two focused overlap prompts.
+The complete argument is reviewed assisted practice; independent assessment
+remains pending. All eight readiness entries remain unassessed.
+
+#### M01-L15: Component grouping claim and identity interpretation
+
+Status: Part 2, prompt 2 reviewed after terminology clarification and focused
+questions on both directions of the identity condition.
+Task: state precisely the
+grouping claim that component discovery makes. What additional claim would be
+needed to interpret the components as the actual identity groups? Distinguish
+the graph result from the claim about the people represented by the records.
+No model answer or implementation was supplied before the attempt.
+
+Learner response:
+
+> component discovery guarantees candidate match relationship. Some determination/measure of pairwise matching and/or clustering algo would be needed to interpret those groups as actual identity groups.
+
+Review: "candidate match relationship" is ambiguous between a direct edge and
+a connection through several edges. Clarify the intended guarantee rather than
+assuming the learner equates component membership with adjacency. The proposal
+for matching measures or a clustering algorithm has not yet been reviewed as a
+statement of the additional identity claim.
+
+Assistance: first focused prompt distinguishes a direct candidate edge from
+connection through several edges. Using the already familiar A-B-C graph with
+no {A, C} edge, ask the learner to state precisely what component membership
+establishes between A and C. No replacement grouping claim or identity-condition
+answer is supplied. The learner's response follows. All eight readiness
+entries remain unassessed.
+
+Learner response:
+
+> there is some relationship between the records.  candidate match for direct edges and transitive relationship between shared component but no direct match.
+
+Review: accepted the intended distinction between direct candidate links and
+connections through other records. Clarified the name of the guaranteed
+transitive relation as path connectivity. Component membership can include both
+directly linked pairs and pairs connected through intermediate records; it does
+not require the absence of a direct edge. This is assisted clarification of the
+learner's wording, not independent final-assessment evidence.
+
+Identity-claim task: the proposed matching/clustering step describes a procedure.
+Ask the learner to state the additional condition about which records describe
+the same person that would make the components equal the actual identity
+groups. No identity condition is supplied before that attempt. All eight
+readiness entries remain unassessed.
+
+Learner's request for clarification:
+
+> I'm not sure I follow what the question is asking.
+
+Clarification: the question concerns what must be true about the records for
+the component grouping to represent identities correctly. Narrowed the prompt
+to one direction: if two records are placed in the same component, what must
+be true about the people they describe?
+
+Learner response:
+
+> the records must represent the same person
+
+Review: accepted the condition preventing different people's records from
+being combined. Then asked the other direction: if two records really describe
+the same person, what must be true about their component membership for the
+grouping to match the true identities?
+
+Learner response:
+
+> the records should be placed in the same component
+
+Review: accepted the condition preventing one person's records from being
+split across components. Together the learner's answers require that two
+records belong to the same component if and only if they describe the same
+person. This is the additional identity claim needed for the component groups
+to equal the actual identity groups; component discovery alone establishes
+graph connectivity. The earlier proposal described an investigative procedure,
+rather than this condition about the records.
+
+The learner supplied both identity conditions after the prompt was clarified
+and separated into its two directions. This is reviewed assisted practice,
+not independent final-assessment evidence. All eight readiness entries remain
+unassessed.
+
+#### M01-L16: Numerical similarity threshold and transitivity
+
+Status: Part 2, prompt 3 accepted after focused feedback on the implication's
+premise. Task: construct a numerical
+example with three records and a similarity threshold for which the resulting
+direct candidate-match relation is not transitive. Define the pairwise
+similarity values and threshold rule explicitly, and explain why the example
+violates transitivity. This prompt concerns the direct candidate-match relation
+formed by the threshold rule. No scores, threshold, edge pattern, or worked
+example was supplied before the attempt.
+
+Learner's example:
+
+> for the records A, B, C consider that {A,B} has a similarity score of 0.95 and {B,C} has a similarity score of 0.88. if the threshold is 0.90, then {B,C} is a non-match
+
+Learner's additional explanation, before feedback:
+
+> In this case A does not transitively match to C since {B,C} is not an above threshold match
+
+Review: accepted the threshold comparison: {A, B} qualifies and {B, C} does not.
+The proposed chain in the order A, B, C does not satisfy the premise of the
+transitivity implication, so its broken link does not demonstrate a violation.
+Transitivity imposes no requirement on {A, C} from that particular chain when
+{B, C} is absent. The learner has not supplied the {A, C} score; do not infer
+whether it is a direct candidate match or rule out all possible completions of
+the partially specified example.
+
+Assistance: first focused feedback on this numerical exercise explains the
+role of the implication's premise and asks the learner to complete or revise
+the scores to form a chain where the transitivity rule applies. It does not
+require the learner to change a particular score or use a particular ordering
+of the records. No replacement values, third-pair outcome, or worked
+counterexample is supplied. The learner's response follows. All eight
+readiness entries remain unassessed.
+
+Learner's revised example:
+
+> if {A,B} has 0.95 and {B,C} has 0.95. If {A,C} has 0.77 similarity score, then it is below threshold and can be considered a non-match. so A does not match with C despite matching with B and B matches with C
+
+Review: accepted the numerical counterexample, retaining the earlier threshold
+of 0.90 and the learner's above-threshold rule. Both scores of 0.95 qualify as
+direct candidate matches, while 0.77 does not. The learner now supplies a chain
+satisfying the transitivity premise whose required third relation is absent.
+This establishes that the thresholded direct candidate-match relation in the
+example is not transitive. It does not assign actual-person identity labels.
+
+The learner supplied the revised scores and reasoning after the focused
+premise clarification; the agent supplied no replacement scores or third-pair
+outcome. This is reviewed assisted practice, not final-assessment evidence.
+All eight readiness entries remain unassessed.
+
+#### M01-L17: Structural importance and identity correctness
+
+Status: bridge and non-bridge counterexamples accepted with the assistance
+recorded below.
+Part 2, prompt 4 begins with bridges:
+Does a candidate edge being a bridge establish that it joins records belonging
+to different people? Support the answer with an example or argument. No verdict
+or example was supplied before the attempt. The original prompt's case of edges
+that are not bridges is recorded afterward.
+
+Learner response:
+
+> Not necessarily. A candidate edge is just representative that two records may be related. if that is the only edge that connects the two components, then perhaps it's two different people. However, consider records describing a person that recently changed their name. If records only carry the legal name then there is bound to be some point in time where the old records are not going to be candidates for the new records and the transitive record may be the record that carrys the name change.
+
+Review: accepted the conclusion that bridge status does not establish different
+identities. The name-change story plausibly explains sparse linkage between
+records for one person, but does not yet specify the vertices and edges needed
+to verify a particular bridge. A record carrying the name change is a vertex;
+the counterexample needs an identified edge whose deletion increases the number
+of components. This is a request to make the example precise, not evidence that
+the learner has asserted that a vertex is an edge. Do not treat the speculative
+"perhaps" as an established statistical relationship between bridges and identity.
+
+Assistance: first focused feedback asks the learner to give a small graph for
+the story, listing its vertices, candidate edges, and true identity labels, and
+identify the claimed bridge edge. No graph, identity-label assignment, or
+replacement argument is supplied. The learner's response follows; the case of
+edges that are not bridges remains pending. All eight readiness entries remain
+unassessed.
+
+Learner's explicit graph:
+
+> Consider V={1,2,3,4,5,6} and E={{1,2},{2,3},{3,4},{1,4},{2,4},{4,5},{5,6}} they are all one true identity but the vertex 4 is the record that represents the name change and thus 'bridges' the graph at edge {4,5}.
+
+Review: accepted the construction. Deleting {4, 5} separates {1, 2, 3, 4}
+from {5, 6}, increasing the component count from one to two. The identified
+edge is therefore a bridge, and its endpoints have the same true identity by
+the learner's supplied labels. This is a valid counterexample to the claim
+that being a bridge establishes an incorrect identity match.
+
+The learner supplied the vertices, edges, labels, and bridge after the prompt
+to make the story explicit; no replacement construction was supplied. This is
+reviewed practice with the recorded assistance, not final-assessment evidence.
+All eight readiness entries remain unassessed.
+
+Task for the other case: does an edge not being a bridge guarantee that its records describe
+the same person? Support the answer with an example or argument. No verdict,
+label assignment, or graph for this case was supplied before the attempt.
+
+Learner response:
+
+> No, this would describe a false positive relationship. Consider records that carry an drivers license number. suppose that we have V={1,2,3,4} and E={{1,2},{2,3},{1,3},{1,4},{2,4},{3,4}} but suppose that the true identity of 4 is not the same as 1,2, or 3. Then this is a false positive match where none of the edges are bridges but it's a false relationship
+
+Review: accepted the counterexample. The supplied graph is K4; deleting any
+single edge leaves it connected, so none of its edges is a bridge. In
+particular, {1, 4} is not a bridge but joins different true identities under
+the learner's labels. The same applies to {2, 4} and {3, 4}. No assumption
+about whether 1, 2, and 3 share an identity is needed for this counterexample.
+The candidate links to 4 are false positives despite not being bridges.
+
+The learner supplied this graph and its identity distinction without a
+construction hint for this case. Together the two constructions show that a
+bridge can be a valid identity link and an edge that is not a bridge can be an
+incorrect identity link. Part 2, prompt 4 is reviewed; this is practice, not
+final-assessment evidence. All eight readiness entries remain unassessed.
+
+#### M01-L18: Learner component implementation
+
+Status: implementation task posed; learner code pending. All four mathematical
+prompts have reviewed attempts with the assistance recorded above. Proceed to
+Part 3 of the core exercise: implement only `connected_components` in `lab.py`
+using the Python standard library and following its existing docstring.
+Preserve every vertex, including isolates, and keep identity labels out of the
+computation. The full contract also covers empty inputs, exactly-one-component
+membership, nonempty returned components, and input preservation.
+
+The function remains the original `NotImplementedError` stub. No algorithm,
+code, solver comparison, or reference implementation is supplied. After the
+learner's attempt, review it and use the existing behavioral checks and
+scenario/deletion comparisons. Those checks have not been run on an
+implementation. Interpretation and the mixed final assessment remain pending;
+M01 is not complete. All eight readiness entries remain unassessed.
