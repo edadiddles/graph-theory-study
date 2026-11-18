@@ -86,7 +86,9 @@ The grouping claim and additional identity condition are reviewed after
 terminology clarification and focused questions. The numerical similarity
 threshold counterexample is accepted after focused feedback on the implication's
 premise. Both structural-importance counterexamples are accepted. All four
-mathematical prompts have reviewed attempts; the learner implementation is next.
+mathematical prompts have reviewed attempts. The first learner implementation
+passes all five existing tests, but a multi-character vertex-ID contract check
+fails; that initialization issue remains to be corrected and reviewed.
 The learner supplied both book ISBNs, Trudeau chapter starts,
 and exercise photographs. Eccles reading and one problem are selected; Trudeau
 Exercises 5 and 11 are verified and assigned in P02 below.
@@ -1414,7 +1416,8 @@ final-assessment evidence. All eight readiness entries remain unassessed.
 
 #### M01-L18: Learner component implementation
 
-Status: implementation task posed; learner code pending. All four mathematical
+Status: first learner implementation submitted; review and its remaining issue
+are recorded in M01-L19. All four mathematical
 prompts have reviewed attempts with the assistance recorded above. Proceed to
 Part 3 of the core exercise: implement only `connected_components` in `lab.py`
 using the Python standard library and following its existing docstring.
@@ -1422,9 +1425,38 @@ Preserve every vertex, including isolates, and keep identity labels out of the
 computation. The full contract also covers empty inputs, exactly-one-component
 membership, nonempty returned components, and input preservation.
 
-The function remains the original `NotImplementedError` stub. No algorithm,
-code, solver comparison, or reference implementation is supplied. After the
-learner's attempt, review it and use the existing behavioral checks and
-scenario/deletion comparisons. Those checks have not been run on an
-implementation. Interpretation and the mixed final assessment remain pending;
+At the time this task was posed, the function was the original
+`NotImplementedError` stub. No algorithm, code, solver comparison, or reference
+implementation was supplied. Actual checks on the learner's subsequent attempt
+are recorded below; full implementation acceptance, scenario/deletion
+comparisons, interpretation, and the mixed final assessment remain pending.
 M01 is not complete. All eight readiness entries remain unassessed.
+
+#### M01-L19: First implementation review, 2026-11-18
+
+Status: first correctness gap identified; learner correction pending. Reviewed
+the learner's implementation committed in 2425ae6. No learner code, tests,
+dependencies, or runtime configuration were changed during this review.
+
+Learner's request:
+
+> I have attempted the first lab. it is currently passing all tests as written. please review
+
+Actual validation:
+
+- Ran the existing suite with `PYTHONDONTWRITEBYTECODE=1 python3 -B -m unittest discover -s labs/01-connectivity -p 'test_*.py' -v`: all five tests passed.
+- Ran one additional read-only contract check with vertices `("aa", "bb")` and edges `(("aa", "bb"),)`. The function returned `[{"a", "b"}, {"aa"}, {"bb"}]`, rather than one component containing both complete IDs. Set ordering is immaterial.
+
+First finding: `lab.py` line 53 initializes the endpoint sets using
+`set(edge_a)` and `set(edge_b)`. A string is iterable over its characters, so
+this construction splits a multi-character vertex ID. The docstring allows
+arbitrary unique string IDs, while all nonempty IDs in the existing test
+fixtures are single characters. The failing result introduces vertices not in
+the input and separates endpoints of the supplied edge.
+
+Feedback identifies that cause without supplying replacement code or a
+reference algorithm. Next task: adjust the initialization to preserve complete
+vertex IDs, then recheck the existing suite and the multi-character-ID case.
+Further implementation reasoning and review follow the correction; passing the
+current suite alone does not establish the full contract. No persistent test
+was added or changed. All eight readiness entries remain unassessed.

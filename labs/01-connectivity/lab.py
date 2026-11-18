@@ -50,7 +50,7 @@ def connected_components(
     for edge in edges:
         edge_a, edge_b = edge
         # initialize component sets to include only the verticies of each edge
-        component_a, component_b = set(edge_a), set(edge_b)
+        component_a, component_b = set({edge_a}), set({edge_b})
         idx_a, idx_b = -1, -1
         # iterate over component index
         # found components will be stored as a reference
