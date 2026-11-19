@@ -86,9 +86,14 @@ The grouping claim and additional identity condition are reviewed after
 terminology clarification and focused questions. The numerical similarity
 threshold counterexample is accepted after focused feedback on the implication's
 premise. Both structural-importance counterexamples are accepted. All four
-mathematical prompts have reviewed attempts. The first learner implementation
-passes all five existing tests, but a multi-character vertex-ID contract check
-fails; that initialization issue remains to be corrected and reviewed.
+mathematical prompts have reviewed attempts. The corrected learner implementation
+passes all five existing tests and five targeted contract checks. No further
+correctness issue was found in this review. The learner's correctness
+explanation exposed a direct-edge/path distinction needing refresh. The
+within-set path condition is correctly restated after clarification, and the
+merge preservation argument is accepted. The arguments that connected groups
+cannot remain split and that the final loop includes missing vertices are
+reviewed. Scenario output comparisons and the remaining lab evidence are next.
 The learner supplied both book ISBNs, Trudeau chapter starts,
 and exercise photographs. Eccles reading and one problem are selected; Trudeau
 Exercises 5 and 11 are verified and assigned in P02 below.
@@ -1416,8 +1421,8 @@ final-assessment evidence. All eight readiness entries remain unassessed.
 
 #### M01-L18: Learner component implementation
 
-Status: first learner implementation submitted; review and its remaining issue
-are recorded in M01-L19. All four mathematical
+Status: learner implementation and correction reviewed in M01-L19/M01-L20;
+the correctness explanation is reviewed in M01-L21. All four mathematical
 prompts have reviewed attempts with the assistance recorded above. Proceed to
 Part 3 of the core exercise: implement only `connected_components` in `lab.py`
 using the Python standard library and following its existing docstring.
@@ -1434,7 +1439,7 @@ M01 is not complete. All eight readiness entries remain unassessed.
 
 #### M01-L19: First implementation review, 2026-11-18
 
-Status: first correctness gap identified; learner correction pending. Reviewed
+Status: first correctness gap identified; its correction is reviewed in M01-L20. Reviewed
 the learner's implementation committed in 2425ae6. No learner code, tests,
 dependencies, or runtime configuration were changed during this review.
 
@@ -1460,3 +1465,190 @@ vertex IDs, then recheck the existing suite and the multi-character-ID case.
 Further implementation reasoning and review follow the correction; passing the
 current suite alone does not establish the full contract. No persistent test
 was added or changed. All eight readiness entries remain unassessed.
+
+#### M01-L20: Corrected implementation review, 2026-11-18
+
+Status: reported defect fixed; behavioral review passed; learner correctness
+explanation reviewed in M01-L21. Reviewed the learner's correction committed in 6ec1299.
+
+Learner request:
+
+> i have updated the code. please review
+
+Review: the endpoint sets now preserve each complete string ID. No further
+correctness issue was found within the small, valid-input scope of the lab.
+Inspection also confirmed that the function uses its graph inputs and local
+state, without consulting `RECORDS` or identity labels. The agent changed no
+learner code, tests, dependencies, or runtime configuration.
+
+Actual validation:
+
+- Reran `PYTHONDONTWRITEBYTECODE=1 python3 -B -m unittest discover -s labs/01-connectivity -p 'test_*.py' -v`: all five existing tests passed.
+- Reran the previously failing multi-character-ID case: passed.
+- Checked a new left endpoint joined to an existing right endpoint's component, retaining an isolate: passed.
+- Checked merging two existing components when the removed right component occurs earlier in the list: passed.
+- Checked merging two existing components when the removed right component occurs later in the list: passed.
+- Checked an empty-string ID and a Unicode isolate, both allowed by the unique-string-ID contract: passed.
+
+Each of the five targeted read-only checks also verified nonempty set outputs,
+the expected partition, exactly-once vertex coverage, and unchanged inputs.
+No persistent test was added or modified. These checks support the review;
+they do not replace the learner's correctness argument or independent assessment.
+
+Next focused reasoning task: during the edge loop, what does each set in
+`components` represent after an iteration, and why do the merge operations
+preserve that meaning? No invariant or proof is supplied before the response.
+Scenario/deletion comparisons, final interpretation, and the mixed assessment
+remain pending. All eight readiness entries remain unassessed.
+
+#### M01-L21: Implementation correctness explanation
+
+Status: merge mechanics described correctly; the within-set path property is
+correctly restated after focused help; its merge preservation argument is
+accepted, as is the argument that connected groups cannot remain split.
+Final vertex coverage is accepted; the core explanation is reviewed with the
+assistance recorded below.
+This continues the reasoning task
+in M01-L20; no code change or further runtime test is needed for this discussion.
+
+Learner response:
+
+> The core logic essentially pulls the component in which the left vertex of the edge is a member and the component in which the right vertex of the edge is a member. it ensures to remove the component from the list of components for the right vertex if it's not the same component as the left vertex. and then union the two components storing the union in the left vertex's component.
+
+Review: accepted this description of the code's merge mechanics. The remaining
+step is to describe a property that remains true during processing and explain
+why the operations preserve it. First focused prompt: using only edges
+processed so far, what must be true about paths between any two vertices in
+one stored set?
+
+Learner response:
+
+> they must exist together in an edge set.
+
+Review: this wording does not yet specify the required connection. Co-occurrence
+in an edge set alone does not imply connectivity, because an edge set may have
+disconnected pieces. Do not assume the learner meant that every pair needs a
+direct edge; that was not explicitly asserted.
+
+Assistance: second focused prompt uses processed edges {A, B} and {C, D} to
+show that A and C can occur in the same edge set without being connected.
+Ask what stronger condition is needed for two vertices to belong to the same
+stored component. No full invariant, preservation argument, or replacement
+algorithm is supplied. The learner's clarification follows. This is assisted
+practice, not a failed final assessment. All eight readiness entries remain
+unassessed.
+
+Learner clarification:
+
+> no i meant the two verticies must exist in the same edge. So for verticies y and z, there would need to exist some edge {y,z} that was already processed
+
+Review: acknowledged the intended direct-edge requirement. It is too strong
+for connected components: after processing {y, x} and {x, z}, the three
+vertices belong together even though there is no {y, z} edge. The relevant
+connection can pass through intermediate vertices.
+
+Assistance after the preceding attempts and focused prompts: worked through
+this distinction using y-x-z and explicitly stated the needed within-set
+condition: any two vertices in a stored set are connected by a path of
+processed edges. Record this as agent-supplied clarification, not an
+independently stated property. No full correctness proof or replacement code
+is supplied.
+
+Next focused task: suppose two existing sets satisfy that path condition.
+Why does an edge between the sets make their union satisfy it too? The
+learner's preservation argument remains pending. All eight readiness entries
+remain unassessed.
+
+Learner returns to the original connectivity question:
+
+> going back to the original question: Using only the edges processed so far, what must be true about paths between any two vertices stored in the same set?
+> To refine my answer, for a particular edge being processed if two verticies appear in the same set/component, then those verticies have to exist on a path formed by prior edges inclusive of the current edge.
+
+Review: accepted this refinement as the connectivity condition after the
+current edge has been processed. The learner correctly allows a path formed
+from previously processed edges and the current edge. This restatement follows
+the recorded explanation of the path-versus-direct-edge distinction; it is
+assisted practice, not independent assessment or a completed preservation proof.
+
+Return to the pending merge question: if two stored sets already satisfy this
+condition, why does processing an edge with one endpoint in each set make
+their union satisfy it? No preservation argument is supplied before the
+learner's response. All eight readiness entries remain unassessed.
+
+Learner's merge preservation argument:
+
+> suppose we have two components A and B that each satisfy the condition: for all x,y in X then x~y where X is a component. Then we have all a1,a2 in A, a1~a2 and all b1,b2 in B, b1~b2. Consider the edge {x,y} where x in A and y in B. We know that for all a in A, a~x and all b in B, b~y. We also know that x~y via the edge. Thus a~b for all a in A and b in B when joined by the edge {x,y} for x in A and y in B
+
+Review: accepted the argument, with the relation interpreted as path
+connectivity in the graph of edges processed through the current iteration.
+Symmetry and transitivity justify the connection for every pair with one
+vertex in A and one in B; previously connected pairs within either set remain
+connected. This establishes that merging preserves the within-set connection
+property. The learner supplies the argument after the focused merge question;
+the underlying path condition had been explained as recorded above. This is
+reviewed assisted practice, not an independent final assessment.
+
+Next focused task: after all edges have been processed, why can a path not
+connect two vertices that remain in different stored sets? This addresses
+whether a true connected group could be split across sets. No argument for
+that conclusion is supplied before the learner's response. The full
+correctness explanation and remaining lab evidence are still pending. All
+eight readiness entries remain unassessed.
+
+Learner's argument against splitting connected groups:
+
+> I think this is asking why is it impossible for a path to exist that connects verticies that are found in different components. This is because the code is constructive from an empty set. thus we only construct the components by joining the components along a path defined by the edge being processed. because every edge involves a union of the components joined by the edge, and is done for every edge, there should exist no edge that connects verticies in different components.
+
+Review: accepted the key observation about edges. Processing an edge puts
+its endpoints together, and subsequent operations only merge sets, so no
+processed edge can join different final sets. Asked the learner to make the
+last connection to paths explicit: if a path started in one final set and
+ended in another, what would have to happen along it?
+
+Learner response:
+
+> it would have had to either be unprocessed or some sort of split occurred.
+
+Review: accepted the contradiction reasoning, clarifying that the relevant
+object is an edge on the proposed path. Such a path would cross between
+different final sets, requiring an edge whose endpoints were never brought
+together or were subsequently split. The loop processes every edge and never
+splits sets, ruling out those possibilities. The learner supplied the
+unprocessed-or-split alternatives after the focused path question; the agent
+made the reference to an edge explicit. This is reviewed assisted practice,
+not independent final-assessment evidence.
+
+Next focused task: which vertices can still be missing from `components`
+after the edge loop, and why does the final vertex loop add them exactly
+once without duplicating vertices already included? No answer for this
+coverage task is supplied before the learner's attempt. The complete
+correctness explanation and remaining lab evidence are still pending. All
+eight readiness entries remain unassessed.
+
+Learner response:
+
+> verticies that are not joined by any edge will not be accounted for. The final loop iterates through the vertex set and adds each missing vertex as it's own component
+
+Review: accepted the explanation. The vertices still missing after edge
+processing are isolated. The final loop considers every supplied vertex,
+and its membership check adds only those not already present; unique input
+IDs ensure each missing vertex is added once. The added singleton accounts
+for that isolated vertex. No hint or correction was needed for this answer.
+
+The core correctness explanation is now reviewed, including the recorded
+help on paths and the later preservation and separation arguments. This is
+guided practice rather than independent final-assessment evidence. The
+implementation and its tests were not changed during the discussion. All
+eight readiness entries remain unassessed.
+
+#### M01-L22: Scenario outputs versus predictions
+
+Status: experiment task posed; learner comparison pending. Run the learner's
+`connected_components` on each of the five supplied scenarios, using the full
+`VERTICES` inventory. Compare the returned component sets, ignoring order,
+with the original recorded predictions. Report any differences before
+revising a prediction. No scenario output table is supplied for this task.
+
+Selected-deletion experiments, final model interpretation, and the mixed
+assessment remain pending. M01 is not complete; all eight readiness entries
+remain unassessed.
