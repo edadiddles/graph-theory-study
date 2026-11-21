@@ -8,12 +8,12 @@ mixed assessments with focused review before advancement. The learner has
 approved adoption of the revised 81-unit sequence. Existing lab directories
 remain the source packages; the new M-IDs describe learning progress. Exact
 exercise choices, quiz questions, and local scopes are finalized when reaching
-each milestone. All learner completion remains unassessed.
+each milestone. M01 is complete; later milestones remain unassessed.
 
 M01 has a [prepared learning card](labs/01-connectivity/notes.md#m01-learning-card-agent-prepared),
-with its initial prerequisite diagnostic reviewed. Focused preparation and
-one Eccles exercise are assigned in the notes; Trudeau Exercises 5 and 11 are
-verified from the learner's photographs and assigned there as well. Later units are mapped
+with all eight required objectives reviewed as Ready. Focused preparation,
+the selected Eccles exercise, and Trudeau Exercises 5 and 11 are reviewed in
+the notes, alongside the lab work and mixed assessment. Later units are mapped
 but not locally prepared. The later Chung boundaries remain conditional on
 original-copy inventories and effort calibration.
 

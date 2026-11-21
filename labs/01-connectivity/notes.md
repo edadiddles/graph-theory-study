@@ -93,12 +93,31 @@ explanation exposed a direct-edge/path distinction needing refresh. The
 within-set path condition is correctly restated after clarification, and the
 merge preservation argument is accepted. The arguments that connected groups
 cannot remain split and that the final loop includes missing vertices are
-reviewed. Scenario output comparisons and the remaining lab evidence are next.
+reviewed. All five reported scenario outputs match the recorded predictions,
+and the ten selected-deletion checks agree with the reviewed predictions.
+The final interpretation is reviewed, including the explicit computational
+observation. The learner confirmed both assigned readings in M01-L25. The
+mixed assessment is in progress. M01-Q01's results and explanations are
+accepted, establishing M01-E1 at its declared depth. M01-Q02's core argument
+and local corrections are accepted, establishing M01-J1. The initial M01-Q03
+attempt confuses the score-based relation with path connectivity. The guided
+example was completed after focused help on pair-score interpretation and
+the implication's truth value. The fresh independent M01-Q03-R01 response is
+accepted, establishing M01-A2. M01-Q04's structural-versus-identity examples
+are accepted, establishing M01-J2. The learner clarified "equivalence
+relation," completing M01-E2. M01-Q05's counterexample is accepted, but the
+claimed implementation condition requires direct edges between every pair.
+Focused practice now distinguishes having neighbors from being connected,
+and the learner has explained both a concrete merge and its general path
+construction. The fresh M01-Q05-R01 explanation is accepted, establishing
+M01-J3. The open-book application and input-preservation evidence in M01-Q06
+are accepted, establishing M01-A1 and M01-A3 and completing M01.
 The learner supplied both book ISBNs, Trudeau chapter starts,
 and exercise photographs. Eccles reading and one problem are selected; Trudeau
 Exercises 5 and 11 are verified and assigned in P02 below.
-Milestone objectives and the final quiz remain unassessed. M02 remains gated on
-M01's completed review.
+Assessment evidence is recorded below. All eight objectives are Ready, and the
+original lab obligations and selected reading/exercise work are reviewed.
+M01 is complete; M02 may begin with its own prerequisite diagnostic.
 No additional technology or package setup is needed for M01.
 
 ### Required objectives
@@ -246,14 +265,14 @@ the learner's original attempts in the working sections above.
 
 | Objective | Readiness | Response/evidence reference | Review or reassessment |
 |---|---|---|---|
-| M01-E1 | Not assessed | | |
-| M01-E2 | Not assessed | | |
-| M01-A1 | Not assessed | | |
-| M01-J1 | Not assessed | | |
-| M01-A2 | Not assessed | | |
-| M01-J2 | Not assessed | | |
-| M01-A3 | Not assessed | | |
-| M01-J3 | Not assessed | | |
+| M01-E1 | Ready | M01-Q01 fresh graph results and independent bridge/cut-vertex explanations accepted | |
+| M01-E2 | Ready | M01-Q04 graph/identity distinction accepted; equivalence terminology clarified by the learner | |
+| M01-A1 | Ready | M01-Q01 and M01-Q06 fresh component/deletion predictions and identity interpretation accepted; computations agree | |
+| M01-J1 | Ready | M01-Q02 independent core proof accepted; local terminology/wording corrections reviewed | |
+| M01-A2 | Ready | M01-Q03-R01 independent numerical counterexample and justification accepted | Original Q03 gap and guided practice preserved |
+| M01-J2 | Ready | M01-Q04 bridge/non-bridge claims refuted using the fresh graph's identity labels | |
+| M01-A3 | Ready | Own implementation reviewed; M01-Q06 fresh inputs, deletions, empty graph, isolates, and input preservation accepted | |
+| M01-J3 | Ready | M01-Q05-R01 corrected counterexample and general correctness explanation accepted | Original Q05 gap and guided practice preserved |
 
 #### M01-D01: quantifier order and general justification
 
@@ -463,8 +482,8 @@ remain assigned; their graph predictions and proofs have not been supplied.
 #### M01-P01: focused implication refresher and selected exercise
 
 Status: the submitted Problems I, Question 2 truth tables, explanation, and
-focused follow-up are reviewed and accepted. Reading completion
-has not been separately reported. This is preparation informed by D03, not the
+focused follow-up are reviewed and accepted. The learner confirmed the assigned
+reading in M01-L25. This is preparation informed by D03, not the
 final milestone quiz. The learner supplied:
 
 - Trudeau, Introduction to Graph Theory: ISBN 9781684112319.
@@ -547,8 +566,8 @@ the actual photographed statements, not the contents alone.
 #### M01-P02: selected Trudeau graph and proof exercises
 
 Status: Exercise 5's representations and proof work and the repaired Exercise 11
-induction are reviewed below. No milestone
-readiness outcome is recorded. The
+induction are reviewed below. The focused reading is confirmed in M01-L25.
+No milestone readiness outcome is recorded. The
 learner supplied four local photographs, all inspected directly:
 
 | Source image | Visible material used to verify selection |
@@ -1643,12 +1662,828 @@ eight readiness entries remain unassessed.
 
 #### M01-L22: Scenario outputs versus predictions
 
-Status: experiment task posed; learner comparison pending. Run the learner's
+Status: all five reported outputs and their comparison accepted, 2026-11-19.
+Task: run the learner's
 `connected_components` on each of the five supplied scenarios, using the full
 `VERTICES` inventory. Compare the returned component sets, ignoring order,
 with the original recorded predictions. Report any differences before
-revising a prediction. No scenario output table is supplied for this task.
+revising a prediction. No scenario output table was supplied before execution.
 
-Selected-deletion experiments, final model interpretation, and the mixed
-assessment remain pending. M01 is not complete; all eight readiness entries
-remain unassessed.
+Learner's execution question:
+
+> how would I run this? is it just running pytest?
+
+Operational assistance: explained the difference between running the existing
+`unittest` checks and printing the function's returned component sets. Supplied
+a short invocation loop calling the learner's own function on `SCENARIOS`;
+no component-discovery implementation or expected output was supplied. The
+learner added a printing loop to `lab.py`; inspection shows the function's
+logic unchanged. The agent made no change to that code.
+
+Learner-reported outputs:
+
+```text
+scenario_1: [{'C', 'B', 'A'}, {'E', 'D'}, {'F'}]
+scenario_2: [{'B', 'C', 'A', 'E', 'D'}, {'F'}]
+scenario_3: [{'B', 'A'}, {'E', 'D'}, {'C'}, {'F'}]
+scenario_4: [{'C', 'B', 'A'}, {'E', 'D'}, {'F'}]
+scenario_5: [{'B', 'C', 'A', 'E', 'D'}, {'F'}]
+```
+
+Learner's comparison:
+
+> This appears to be the same as my predictions
+
+Review: confirmed exact agreement for all five scenarios when component order
+and set-element order are ignored. No original prediction needs revision for
+these component outputs. This records the learner's computation and comparison,
+not a new agent execution or independent final assessment. Selected-deletion
+experiments are reviewed in M01-L23; model interpretation and the mixed
+assessment remain pending.
+All eight readiness entries remain unassessed.
+
+#### M01-L23: Selected-deletion experiments
+
+Status: learner reports agreement; all ten specified cases independently
+replicated with the learner's function, 2026-11-19. Task: use the learner's
+function to check the previously analyzed edge and vertex deletions below.
+For Scenarios 1 and 2, these are cases from the learner's bridge/cut-vertex
+deletion lists; Scenarios 3-5 use the learner's explicitly selected cases.
+
+| Scenario | Delete edge | Delete vertex |
+|---|---|---|
+| scenario_1 | {A, B} | B |
+| scenario_2 | {C, D} | C |
+| scenario_3 | {A, B} | B |
+| scenario_4 | {B, C} | B |
+| scenario_5 | {C, D} | C |
+
+Treat each edge deletion and vertex deletion independently, starting from that
+scenario's original inputs each time. Edge deletion retains the vertex
+inventory. Vertex deletion removes the vertex from the vertex input and all
+its incident edges from the edge input. Use modified inputs for the calls;
+preserve the original scenario data and predictions. Share the outputs and any
+differences from the predictions. No deletion outputs were supplied in advance.
+
+Learner's report:
+
+> the edge deletions and vertex deletions look like i predicted as well
+
+Review and actual validation: the learner did not paste the individual
+deletion outputs. The agent repeated all five edge-deletion and five
+vertex-deletion calls using the learner's unchanged function and the cases
+in the table. Each call started from its original scenario. Edge deletion
+retained the full vertex inventory; vertex deletion excluded the vertex and
+all incident edges. All ten returned partitions matched the reviewed
+predictions, including isolated vertices, and contained every remaining
+vertex exactly once. The Scenario 2 comparison includes F, as previously
+clarified; the learner's original omission remains preserved in M01-L05.
+
+This verifies the specified cases directly; it does not claim to inspect a
+saved learner deletion script or substitute for independent final assessment.
+No source, input data, or persistent test was changed by the agent, and the
+existing test suite was not rerun during this comparison. Final model
+interpretation and the mixed assessment remain pending. All eight readiness
+entries remain unassessed.
+
+#### M01-L24: Final model interpretation
+
+Status: Part 5 account and explicit computational observation accepted,
+2026-11-20, with the clarification recorded below. Task: choose
+one supplied scenario whose component groups disagree with the true identity
+labels. Give a mathematical statement justified from the graph, an observed
+result from running the learner's function, and the additional identity
+assumption needed to interpret components as people. Explain the grouping
+error using the labels. Also identify one limitation of the model and one
+question about similarity scores or real data that this lab leaves unanswered.
+
+This follows the original interpretation prompt; no model answer is supplied.
+The mixed assessment remains pending. M01 is not complete; all eight readiness
+entries remain unassessed.
+
+Learner account:
+
+> For scenario_2, the person-1 and person-2 existed in a connected component and it was a simply connected graph (a chain or linear). These components were created through the edge set provided in the scenario. The assumption used to interpret as identities was that each connected component represented a distinct identity. The limitation of the model was that any connection provided was enough to add a record to the entity and the connections were provided. Also, with the data provided (just the name) there is no way to distinguish between person-1 and person-2 sense they both appear to have the same name "Alex Morgan". There was no similarity scores provided in this data and with just name how would the similarity score be deteremined to create these different edge sets.
+
+Review: accepted the identification of the merged person-1/person-2 records,
+the assumption interpreting components as identities, and the limitation that
+supplied links can join proposed groups without certifying shared identity.
+The identical observed name values are a relevant information limitation;
+they do not supply identity evidence that resolves the two known labels.
+The question of how names would yield similarity scores and different edge
+sets is accepted as the requested open question, not treated as a request to
+solve a later scoring exercise.
+
+Minor terminology refinement: the chain component is a path graph. Do not
+infer that the learner claimed the whole Scenario 2 graph is connected, or
+assign a topology misconception from the phrase "simply connected" alone.
+
+The remaining distinction in this account is the computational observation.
+Saying that components were created through the supplied edge set describes
+the procedure/input; an observation reports what was returned when the
+function ran. The learner's actual Scenario 2 output was already correctly
+reported in M01-L22. This is a request to identify its observational role
+explicitly, not evidence of an incorrect computation or a request to rerun it.
+
+First focused clarification for this reflection: ask the learner to add one
+sentence stating what the function returned for Scenario 2. No replacement
+sentence or output is supplied here. The reflection and mixed assessment
+remain pending. All eight readiness entries remain unassessed.
+
+Learner's explicit computational observation:
+
+> The function returned a component containing {A,B,C,D,E}
+
+Review: accepted this as an observed result from the learner's run. It
+accurately identifies one returned component without claiming it was the
+only component. The reflection now covers the graph description, observed
+result, identity assumption/error, limitation, and open question. This is
+reviewed guided work after the request to distinguish an observation from
+the procedure, not independent assessment evidence.
+
+#### M01-L25: Reading completion and assessment entry
+
+Status: both assigned readings confirmed by the learner, 2026-11-20.
+At this checkpoint, the earlier P01/P02 records had not separately confirmed
+reading completion. Asked about the previously assigned scope before starting
+the quiz:
+
+- Eccles Chapter 2, Implications, printed pages 10-20, assigned in M01-P01.
+- The focused Trudeau Chapter 2 exposition on graph definitions, path graphs,
+  and degree notation assigned in M01-P02; this is not a new whole-chapter task.
+
+Learner response to the question covering both readings:
+
+> Yes
+
+Review: recorded completion of both assigned readings on the learner's report.
+Exercises, lab implementation, experiments, and reflection are reviewed with
+their recorded assistance. Reading and supplied-proof coverage remain separate
+from exercise completion under ASSESSMENT.md. No quiz questions had been
+generated before this confirmation. The next record begins the adopted
+closed-book reasoning phase; a separate open-book application follows later.
+M01 remains incomplete; all eight readiness entries remain unassessed.
+
+#### M01-Q01: Closed-book assessment, graph structure
+
+Status: completed; all results and requested explanations accepted without
+substantive assistance. M01-E1 is Ready. The graph/deletion portion of M01-A1
+is supported; its separate identity-data application remains pending.
+Coverage: M01-E1 and the graph-structure/deletion portion of M01-A1. Other
+objectives and the separate open-book application remain pending.
+
+Permitted aids: the question and blank scratch paper only; no study notes,
+books, code, search, or automated tools. Wording clarification is allowed;
+substantive help changes the affected item to practice and requires fresh
+independent assessment afterward. The batch is untimed and can be paused
+between parts. Parts may be submitted separately; hold grading and substantive
+feedback until the learner has completed the batch.
+
+Consider the simple undirected graph:
+
+V = {a, b, c, d, e, f, g, h}
+
+E = {{a, b}, {b, c}, {c, a}, {c, d}, {d, e}, {f, g}}
+
+Give brief justifications for the following:
+
+1. List the connected components.
+2. Identify all bridges and all cut vertices.
+3. Classify the whole graph as a tree, a forest, both, or neither.
+4. List the components after deleting edge {c, d}.
+5. List the components after deleting vertex c and all its incident edges.
+
+Evaluate parts 4 and 5 independently from the original graph. Preserve all
+remaining vertices. No answers, hints, or worked graph drawing are supplied
+with this batch. The actual learner response and review follow.
+
+Learner response:
+
+> 1. {a,b,c,d,e} {f,g} {h} 2. Bridges: {c,d} {d,e} {g,f}; Cut Verticies: {c,d} 3. neither, there is a cycle. 4. {a,b,c} {d,e} {f,g} {h} 5. {a,b} {d,e} {f,g} {h}
+
+Review: all five sets of results are correct. Read the labelled cut-vertex
+answer {c, d} as the set containing the two vertices, not as a mistaken edge
+classification. The edge {g, f} is the same undirected edge as {f, g}. Both
+deletion results correctly preserve h and treat the deletions independently.
+The cycle justification is sufficient to exclude both trees and forests; no
+separate disconnectedness argument is required for that conclusion.
+
+The initial submission omitted the requested brief explanations for the
+bridge and cut-vertex lists. Requested them neutrally, without supplying
+definitions, a method, or additional results. This requested evidence already
+required by the issued question; it was not a correction or a new topic.
+No misconception was inferred from the missing explanation, and the attempt
+was not converted to assisted practice.
+
+Learner's bridge explanation:
+
+> for the bridges: the subcomponent {a,b,c} are in a cycle, so any edge connecting any of these verticies will not be a bridge. This leaves A-d-e for the first component where A is the cyclic subcomponent. Since this is a linear graph (or a chain), all edges will be bridges since they break the chain so the edge connecting the subcomponent A to d which is {c,d} and the edge {d,e} are bridges. The second component is just two verticies joined by an edge which is also a bridge using the same justification as the linear/chain. One thing to note, the edge A-d mentioned above isn't obviously a bridge since there could be two edges that connect the subcomponent A to d (for instance {c,d} and {b,d}) but this isn't the case in our graph, it is only connected via {c,d} and thus is a bridge.
+
+Acknowledged receipt and requested the remaining cut-vertex explanation,
+without grading the partial explanation or supplying a hint.
+
+Learner's cut-vertex explanation:
+
+> for the cut verticies: Using the same idea with the subcomponent A={a,b,c}, none of these verticies are cut verticies. However, when adding in the linear subcomponent {d,e}, then c does because a cut vertex. This is because in the full component C is the record that connects the subcomponent {a,b,c} to the subcomponent {d,e}. also, vertex d is a cut vertex because e is only connected to A through d. No other components have a cut vertex because they have 2 verticies or less.
+
+Completed review: accepted both explanations. The bridge argument correctly
+distinguishes the internal cycle edges from the unique attachment to d and
+the remaining chain edges. In context, the opening reference to cycle edges
+does not assert that {c, d} is not a bridge; the learner explicitly identifies
+and justifies it as one. The hypothetical additional {b, d} edge is clearly
+distinguished from the given graph.
+
+The cut-vertex argument correctly distinguishes the triangle on its own
+from the full component with the attachment through c, and explains d's
+role in connecting e. Do not interpret the preliminary triangle statement
+as denying that c is a cut vertex of the full graph. The other small
+components have no cut vertices. No correction, model explanation, or
+substantive assistance was needed to obtain these answers.
+
+M01-E1 is Ready at Explain depth on this independent fresh-graph evidence.
+M01-A1 remains Pending only for the separate identity-data application; its
+closed-book structural/deletion evidence is accepted. This closes Q01, not
+the milestone. The remaining assessment continues below.
+
+#### M01-Q02: Closed-book assessment, path-defined relation
+
+Status: completed; independent core argument and local corrections accepted,
+2026-11-21. M01-J1 is Ready. No substantive proof help was given before the
+independent attempt.
+Use the same closed-book conditions as Q01: question and blank scratch paper
+only, without notes, books, code, search, automated tools, or substantive
+agent assistance. The task is untimed and may be answered in parts; wait
+for the complete argument before giving grading or substantive feedback.
+
+Let G = (V, E) be an arbitrary finite simple undirected graph. Define a
+relation on V by x ~ y if and only if there is a path in G from x to y.
+Use the graph and path conventions from the lab.
+
+Is this relation an equivalence relation on V? Give a complete justification
+for arbitrary G. No verdict, property checklist, proof outline, or path
+construction is supplied before the attempt.
+
+Learner response:
+
+> Yes, this is an equivalence relation on V. To be an equivalence relation on V, the three properties must be satisfied: Symmetry, Reflexivity, and Transitivity. For symmetry: we have to show that x~x, which is true since any vertex has a path onto itself. For Reflexivity: we have to show y~x, which is true since if a path exists from x to y then we can construct a path that walks backwards from y to x. For Transitivity: we have to show that if x~k and k~y then x~y. If x~k, then a path exists between x and k and if k~y, then a path exists between k and y. If the vertex set A of the path between x and k; and the vertex set B of the path between k and y do not intersect, then we can join the two paths to make a path from x to y and we are done. However, if A and B do intersect, then joining the two paths will no longer be a path. Let's define Z to be the non-empty intersection of A and B. Suppose h in Z is the first vertex seen along the path from x to k. thus x~h and h~y. And since h is the first vertex along the path from x to k, then there should exist no vertex in the path x to h along the path h to y. Which proves transitivity for all k such that x~k and k~y then x~y
+
+Review: the learner supplies arguments for all three required properties,
+including the first-common-vertex construction for transitivity. The retained
+sections have no additional common vertex beyond their joining point, so the
+core construction is valid. The first two arguments have interchanged property
+headings; the reasoning itself addresses the required properties. Treat this
+as a labelling correction to verify, not an automatic conceptual failure.
+
+The case description also needs precision: as defined, A and B both contain
+k, so the literal disjoint case does not arise. The statement about an
+intersection preventing direct concatenation is correspondingly imprecise.
+The learner's first-common-vertex construction already handles the required
+connection; the extra case description is not needed to establish it. Do
+not replace the learner's proof or infer that transitivity has been disproved.
+
+Feedback: acknowledge the valid core argument, identify the swapped headings
+and the fact that the two sets already contain k, and request a short
+correction of the property labels and case distinction. Do not supply a
+replacement case distinction or ask for the complete proof again. This is
+verification of local precision points, not yet evidence of a substantive
+gap requiring a fresh full assessment. M01-J1 remains Pending until clarified;
+M01-E1 remains Ready. No subsequent question is issued at this point.
+
+Learner's correction:
+
+> 1. yes, i appear to have had the meaning of reflexivity and symmetry swapped. 2. Point taken, the vertex sets of the path from x to h and the path from h to y will not be disjoint (intersection be empty) because they both contain the vertex h. And this intersection that contains a single vertex which is the transitive node between both paths is exactly the requirement for the transitivity. This is the case since a path contains no vertex which is passed through twice so the adjoining of x-h and h-y will not contain the same vertex twice and they have h in common so the path is "continuous" (or in other words they connect).
+
+Completed review: accepted the acknowledgement of the interchanged property
+names together with the two correct property arguments already supplied.
+Post-item feedback reinforces the standard labels. The clarification correctly
+describes the retained x-to-h and h-to-y sections meeting at h, so joining
+them yields the claimed path.
+
+Make the scope explicit in feedback: the single shared junction concerns
+the retained sections; the original paths can have additional common vertices.
+The original first-common-vertex construction already handles those cases.
+Do not treat the learner's phrase "requirement for transitivity" as a new
+restriction that arbitrary original paths must meet only once. The underlying
+proof was independently supplied, and the local precision corrections do
+not require repeating the full item or converting it to assisted practice.
+M01-J1 is Ready at Justify depth. This closes Q02, not the milestone.
+
+#### M01-Q03: Closed-book assessment, numerical relation
+
+Status: original independent attempt not accepted; guided practice completed.
+The subsequent independent assessment is accepted in M01-Q03-R01, establishing
+M01-A2 readiness. The original outcome remains preserved. Issued 2026-11-21.
+Initial conditions were closed book:
+the question and blank
+scratch paper only, without study notes, books, code, search, automated tools,
+or substantive agent help. The task is untimed.
+
+Three records p, q, r have symmetric similarity scores in [0, 1]. Every
+self-score is 1. The supplied scores for different records are:
+
+s(p, q) = 0.63, and s(q, r) = 0.91.
+
+Define the score-based relation R by u R v if and only if s(u, v) >= 0.80.
+
+Can the remaining score s(p, r) be chosen so that R is not transitive? Give
+a value and justify the failure if possible; otherwise justify why no choice
+works. No value for the missing score, verdict, witness ordering, or proof
+step was supplied before the attempt.
+
+Learner's notation and scope questions:
+
+> A couple clarifications. what is R? is it the graph with Vertex set V={p,q,r}? also what is the meaning of uRv? Lastly, was there some reading on similarity scores that I missed? I think I can answer the question but don't think there was any specific study of this
+
+Clarification: R names a relation on {p, q, r}; u R v reads "u is related to
+v" and is defined here by the pair's score meeting the supplied threshold.
+No additional reading on computing similarity scores was assigned or needed;
+the scores are inputs to the question. This referred to the numerical threshold
+exercise already studied, without repeating its worked values or witness.
+No score outcome, missing value, or solution method was supplied, so these
+were permitted notation/scope clarifications rather than substantive help.
+
+Learner's independent attempt:
+
+> Thanks. Suppose R is not transitive, then for every pair x,y in R such that x~y then there does not exist any k in R such that x~k and k~y then x~y. We are working with 3 vertex, so let's just step through all of them. Before beginning, I will refer to an edge to only refer to an above threshold edge/similarity score relationship. That is an edge between u and v will be used to represent s(u,v) >= 0.80. First, let's observe the path r to q. s(r,q) = 0.91 >= 0.8 thus an edge exists. setting k (our transitive node) to q, we have transitivity. Second, let's observe the path p to q. s(p,q) = 0.63 < 0.80 thus an edge does not exist. Our problem allows us to choose s(p,r). Let's choose s(p,r) < 0.8, then we are done. p is an isolated component thus p ~/~ q. Let's choose s(p,r) >= 0.8. An edge now exists between p and r and a path exists between r and q. thus p~r and r~q and hence we have transitivity. Finally, let's observe the path r to p. this is the similar score selection we had in the previous part and s(r,p) < 0.8 results in r ~/~ p and s(r,p) >= 0.80 results in r~p through a direct edge. This direct edge provides transitivity. And thus R can not be "not transitive" with any selection of s(p,r). in pictoral form, with s(p,r) < 0.8 we get the edges: p  r-q  and for s(p,r) >= 0.8 we get the edges: p-r-q.
+
+Review: the conclusion is not correct. The drawings correctly represent the
+distinct-record pairs that meet the threshold in the two cases, but the
+argument then treats path connectivity as the score-based relation R. A
+path through another record does not make its endpoint pair belong to R;
+the definition uses that pair's own score. This is a substantive gap in the
+assessed numerical-relation objective, rather than a property-label slip.
+Further reasoning in the opening formulation has not yet been reviewed in
+detail; focus first on the interpretation of R rather than correcting all
+parts at once.
+
+Readiness: M01-A2 is Needs focused review. Retain the original independent
+response and outcome. From this feedback onward, use Q03 as guided practice;
+successful assisted completion cannot by itself change A2 to Ready. After
+focused review, generate a fresh comparable independent task for A2. Do not
+repeat unrelated objectives already supported by evidence: M01-E1 and
+M01-J1 remain Ready.
+
+First focused practice prompt: using only the definition u R v if and only
+if s(u, v) >= 0.80, what determines whether p R q holds? Identify the
+path/score-relation distinction without supplying the missing score or a
+complete failure witness. The learner's response remains pending. No new
+assessment task or answer key is generated here.
+
+Learner's conceptual clarification request:
+
+> what is the transitivity rule on a pair-score relation? I believe it would be something along the likes of if pRk and kRq then pRq. And if this holds, then we can also expand to statements like pRt and tRk and kRq then pRq. My argument was to represent something back into the edge argument to explain in terms of path connectivity. I used an  edge exists between u and v iff s(u,v) >= 0.8 and you stated that  s(u,v) >= 0.8 iff uRv. thus an edge exists between u and v iff uRv. This maps directly back onto the path connectivity problem since the edge {p,t} iff pRt and the edge {t,k} iff tRk and the edge {k,q} iff kRq.
+
+Second focused explanation: acknowledge that the transitivity implication,
+when required for every triple, is correct, and that the threshold-edge
+encoding is valid for the distinct records under discussion. Longer-chain
+inferences are justified if R has been established to be transitive; drawing
+the relation as a graph does not establish that property.
+
+Distinguish direct adjacency from reachability using the learner's own
+p-t-k-q chain. That chain establishes a path, whereas p R q corresponds to
+the direct pair's threshold condition. The earlier equivalence proof concerned
+path connectivity, not the direct-edge relation of every graph. Explain this
+single distinction without assigning the missing numerical score or giving
+the complete failure witness.
+
+Return to the pending practice task: evaluate p R q using its supplied score
+and the given threshold rule. No numerical verdict is supplied before the
+learner's response. This discussion remains guided practice; M01-A2 still
+needs focused review and later fresh independent reassessment. Other Ready
+objectives are unchanged.
+
+Learner's evaluation of the fixed pair:
+
+> to answer the statement "does pRq hold under the given score rule?" No pRq does not hold under the given score rule. since s(p,q) < 0.8
+
+Review: accepted this use of the pair's own score. Asked the learner to
+complete the practice example with a specific missing score and a triple
+for which the transitivity implication fails, stating the R-relationships.
+
+Learner's selected score and relations:
+
+> if we select s(p,r) = 0.5 < 0.8 the p is an isolated component and is therefore unreachable by both q and r. qRp does not hold and rRp does not hold but qRr does hold.
+
+Learner's self-score question:
+
+> The problem statement did provide that pRp=1, But don't know if/how this plays into the argument
+
+Review: the listed pairwise statements for the selected score are correct,
+but they have not supplied a triple with both transitivity premises true
+and its conclusion false. Do not record this practice response as another
+failed independent assessment.
+
+Focused clarification: the numerical self-score is s(p, p) = 1, which makes
+the statement p R p true under the threshold. It specifies self-related
+cases and establishes reflexivity, not transitivity by itself. Transitivity
+must hold for every triple; to disprove it requires one triple with both
+premises true and the conclusion false. This clarifies the implication and
+counterexample requirement that was not yet precise in the original attempt.
+
+Next practice task: revise the selected score and exhibit such a failing
+triple. Do not supply a replacement score or witness ordering. M01-A2 remains
+Needs focused review until the practice is completed and a fresh independent
+assessment succeeds. M01-E1 and M01-J1 remain Ready.
+
+Learner's revised score and argument:
+
+> if s(p,r) = 0.9 >= 0.80 then pRr holds, and we still have qRr holds and pRq does not hold. We can state pRr and rRq, thus pRq. We also have rRp but not pRq so currently not rRq but qRr does in fact hold based on s(q,r) = 0.91
+
+Review: accepted the score choice and initial pairwise statements as the
+needed facts. Asked which assumption allows the inference "thus p R q" and
+what follows when it conflicts with the supplied score, rather than assuming
+the learner's contradictory wording was already a clear final conclusion.
+
+Learner response:
+
+> The inference is valid assuming transitivity holds. Since s(p,q) < 0.8, then we should conclude that p and q is transitively linked
+
+Focused logic step: the learner correctly identified the transitivity
+assumption but did not yet state its consequence for the relation's status.
+The agent organized the learner's facts as P = (p R r and r R q), true,
+and Q = (p R q), false, and asked for the truth value of P implies Q.
+This was substantive guided practice, not an independent reassessment.
+
+Learner response:
+
+> That would be false
+
+Completed practice review: accepted the implication's truth value. The
+chosen score and pairwise facts give one triple where the transitivity
+implication is false, hence a counterexample for the score-based relation.
+The score and pairwise facts came from the learner; the distinction between
+relations and the final logical framing required the recorded assistance.
+This completes the guided example without changing the original independent
+outcome or making M01-A2 Ready. A fresh independent item follows.
+
+#### M01-Q03-R01: Fresh closed-book numerical-relation assessment
+
+Status: completed; independent response accepted. Issued 2026-11-21.
+Coverage: reassessment of M01-A2 only. M01-E1 and M01-J1 remain Ready.
+Return to closed-book conditions: question and blank scratch paper only,
+without study notes, books, code, search, automated tools, or substantive
+agent help. The task is untimed.
+
+Three records u, v, w have symmetric similarity scores in [0, 1]. Every
+self-score is 1. The supplied scores for different records are:
+
+s(u, v) = 0.64, s(v, w) = 0.42, and s(u, w) = 0.57.
+
+Choose a threshold t in [0, 1], defining x R y if and only if s(x, y) >= t.
+Choose t so that R is not transitive, and justify the choice with explicit
+R-statements.
+
+The scores are supplied data; no method for deriving them from record fields
+is required. No threshold choice, witness ordering, answer key, or proof
+outline was supplied with this fresh task.
+
+Learner response:
+
+> suppose t = 0.5, then uRv and uRw holds, but vRw does not. Hence vRu and uRw but not vRw.
+
+Review: accepted. At the chosen threshold, the two stated premise relations
+hold and the required conclusion does not; the reversal uses the given
+symmetry correctly. This is a valid counterexample on the fresh data, supplied
+without hints after the item was issued. M01-A2 is Ready at Apply-and-justify
+depth. The earlier failed assessment and substantive guided practice remain
+recorded separately. Other unfinished objectives and the open-book application
+remain pending.
+
+#### M01-Q04: Closed-book assessment, structure versus identity
+
+Status: completed; claims and grouping/identity explanation accepted after
+the learner clarified the intended term. M01-E2 and M01-J2 are Ready.
+Continue under the same closed-book conditions, with blank scratch
+paper allowed and no notes, books, code, search, automated tools, or substantive
+agent help. Give the complete response before grading feedback.
+
+Six record vertices form this simple undirected candidate graph:
+
+V = {i, j, k, l, m, n}
+
+E = {{i, j}, {j, k}, {k, i}, {k, l}, {l, m}, {m, n}, {n, l}}.
+
+Known evaluation labels assign i, j, k, l to person-A and m, n to person-B.
+Edges represent proposed matches; the identity labels are evaluation data.
+
+Assess the following claims, with justification from the graph and labels:
+
+1. "Because {k, l} is a bridge, it must be an incorrect identity match."
+2. "Because {l, m} is not a bridge, it must be a correct identity match."
+3. What grouping does component discovery produce here, what mathematical
+   relationship does membership in that group establish, and what can be
+   concluded about actual identity from connectivity alone?
+
+No verdict, worked drawing, or model interpretation is supplied before the
+attempt. Learner responses and review follow.
+
+Learner's initial response:
+
+> for 1 and 2, a bridge is not indicative of a correct or incorrect identity match. A bridge may represent something like a name change after marriage and the bridge is what connects the prior name cluster to the current name cluster. A non-bridge could occur on low quality data where a single value transcription error on an identifier could establish wrong identity membership (connections to records of the wrong identity). For number of 3, the component discovery shows all records in the vertex set are connected. Not sure what the question is asking for "what mathematical relationship does membership establish". Connectivity alone only establishes a relationship between records but does not establish truth about the identity (nor does disconnectedness establish separate identities)
+
+Clarification: requested application of the general examples to the given
+endpoint identity labels. Explained that membership means two vertices
+belonging to the same connected component and asked for a precise graph
+statement about such vertices. No mathematical answer or case verdict was
+supplied; these were wording clarifications under the assessment rules.
+
+Learner's response:
+
+> for 1. {k,l} is a bridge but both k and l belong to the identity label 'person-A' and thus the same person. for 2. {l,m} is not a bridge but l belongs to the identity label 'person-A' while m belongs to the identity label 'person-B' 3. the mathematical relationship that membership establishes is equality. Because the component is connected we get symmetry, reflexivity, and transitivity. This is because all vertex in a connected graph is reachable.
+
+Review: accepted claims 1-2 as correctly refuted using the specified data.
+The bridge joins matching true identities, while the chosen edge that is
+not a bridge joins different true identities. Together these are valid
+fresh-data counterexamples to the two structural-status claims, supplied
+without substantive assistance. M01-J2 is Ready at Justify depth.
+
+Part 3 correctly identifies that all six records are grouped together and
+that connectivity alone does not establish true identity or that disconnected
+records must have separate identities. The learner also refers to reachability
+and the three relation properties, but calls the relationship "equality."
+Do not assume this means literal equality of distinct vertices rather than
+an imprecise name for the intended relation. Request its precise meaning
+before grading that wording. This is not a new theory requirement.
+
+Next clarification: ask whether the learner is asserting i = j or describing
+a relationship between distinct vertices, and request a precise definition
+of that relationship. Do not supply the replacement term or a model answer.
+M01-E2 remains Pending for this clarification; the other accepted objectives
+are unchanged. No new assessment question is issued yet.
+
+Learner clarification:
+
+> I meant to put the equivalence relationship
+
+Completed review: accepted the clarified term together with the already
+supplied reachability explanation and relation properties. The learner is
+describing equivalence under reachability, not literal equality of vertices.
+The earlier response also distinguishes proposed grouping from actual
+identity and applies both structural claims to the given labels. The request
+to clarify wording supplied no replacement term or solution, so this remains
+independent assessment evidence. M01-E2 is Ready at Explain depth. This closes
+Q04; the implementation assessment and separate open-book application remain.
+
+#### M01-Q05: Closed-book assessment, implementation correctness
+
+Status: initial independent explanation not accepted; guided practice followed.
+The fresh independent explanation is accepted in M01-Q05-R01; the original
+outcome remains preserved. M01-A3's separate application remains pending. Initial
+conditions were closed book: question and blank scratch paper only;
+no notes, books, code, search, automated tools, or substantive agent help.
+The task is untimed. Parts may be submitted separately; review the batch
+after both are submitted.
+
+For a finite simple undirected input graph, a proposed program returns
+nonempty sets containing exactly the input vertices, each appearing once.
+It also guarantees that both endpoints of every input edge occur in the
+same returned set.
+
+1. Are those guarantees sufficient to establish that the returned sets are
+   exactly the connected components? Justify with an argument or counterexample.
+2. Explain why your own implementation returns the connected components,
+   including how it handles isolated vertices and an empty vertex set.
+
+No verdict, example, missing condition, invariant, or proof outline was supplied
+before the attempt. Five objectives remain Ready; M01-A1 and M01-A3 still
+require their separate open-book application evidence.
+
+Learner's part 1:
+
+> 1. no, these alone are not sufficient to establish that the sets are exactly the connected components. Consider the vertex pair x,y in V such that {x,y} not in E. Further for all k in V {k,y} not in E. Thus y has no explicit component membership under the rules. Suppose x in C_0 which is a connected component in V. y must exist in some C_p where C_p is an arbitrary connected component of V. Let's choose C_0. Thus for C_0 to remain a connected component {x,y} must be in E, but it was not by construction. Since no rules of the program prevent the inclusion of y in C_0, the program rules are not suffient to output exactly the connected components
+
+Acknowledged receipt and requested part 2 without grading feedback or hints.
+
+Learner's part 2:
+
+> 2. My implementation of the program did guarantee that it produced exactly the connected components because, it guaranteed the two rule of (1) and provided 1 more rule; if x,y in C where C is a subset of V then {x,y} in E. This explicitly forbids the selection of C_0 for y that was used to invalidate the statement in (1). Instead my program forced all verticies that were not contained in the edge set into sets with only themselves. So if the verticies a,b,c in V such that {k,a} not in E, {k,b} not in E, and {k,c} not in E for all k in V, then the resulting components were C_a = {a}, C_b = {b}, and C_c = {c}
+
+Review: accepted part 1's isolated-vertex counterexample. The guarantees allow
+an isolated vertex to be placed with another vertex without violating any
+stated edge requirement. The isolation hypothesis, rather than merely one
+missing edge, supports that counterexample. Part 2 also correctly describes
+adding isolated vertices as singleton sets.
+
+The proposed extra rule in part 2 is too strong: it requires a direct edge
+for every pair in a stored set. The implementation does not guarantee that,
+and connected components do not require it. This is a substantive gap in
+the correctness explanation, not a newly identified code defect. Empty-input
+handling has not yet been explained. Focus on the first meaningful gap
+rather than supplying a replacement invariant or full correctness argument.
+
+M01-J3 is Needs focused review. From this feedback onward Q05 is guided
+practice; retain the original independent outcome and use a fresh independent
+assessment after review. The five Ready objectives remain accepted.
+
+First focused practice task uses a code-operation angle: the stored sets
+are {a, b} and {c, d}, and the next processed edge is {b, c}. Ask whether
+merging those vertex sets creates an edge {a, d} in E. Do not supply the
+replacement path condition or write or modify the learner's code. The
+learner's response remains pending.
+
+Learner's first correction:
+
+> yes, i was incorrect with my extra rule. it should have been if x,y in C then x~y which guarantees a path exists in E between x and y.
+
+Review: accepted the corrected path condition. Asked why the merge operation
+preserves it and what happens for an empty vertex set, rather than supplying
+a replacement correctness proof.
+
+Learner's attempted elaboration and empty-input explanation:
+
+> The rule requires that for a component K with two or more verticies, call them x and y, then both x and y must be in the edge set. More mathematically, if x,y in K then there exists p,q in K such that {x,p} in E and {y,q} in E. My merge operation puts each isolated vertex in a component with just that vertex. Since the component size is just 1, the vertex does not have to appear in any edge. For an empty vertex set, there are no edges and no isolated verticies, thus my function returns an empty set.
+
+Review: the empty-input reasoning is correct. Clarified that the function's
+actual return is the empty list [], not an empty set; this is a return-type
+wording correction, not a new code defect. The proposed neighbor condition
+is necessary for a connected component with at least two vertices but is
+not sufficient to establish paths between its vertices. Do not call the
+necessary condition false; it simply does not justify the required property.
+
+Focused example: proposed returned set K = {a, b, c, d}, with the graph's
+only edges {a, b} and {c, d}. Asked whether every vertex has a neighbor and
+whether there is a path from a to c.
+
+Learner response:
+
+> no there is no path from a to c but every vertex does have a neighbor. a and b are neighbors and c and d are neighbors.
+
+Review: accepted both observations. The learner now explicitly distinguishes
+the neighbor condition from connectivity on this example. This is guided
+practice, not independent reassessment evidence.
+
+Next concrete trace: process the new edge {b, c}, merging the stored sets
+{a, b} and {c, d}. Ask the learner for a path from a to d afterward and
+whether the merge added a direct edge {a, d} to E. No path sequence or full
+preservation argument is supplied before the response. M01-J3 remains Needs
+focused review, with a fresh independent check required after practice.
+
+Learner's concrete trace:
+
+> no, there is no edge {a,d} but the path a-b-c-d connects a to d
+
+Review: accepted the distinction between the path and a newly created direct
+edge. Asked the learner to generalize: disjoint stored sets A and B are
+internally connected by processed edges; the next edge {u, v} has one endpoint
+in each. How can arbitrary x in A and y in B be joined by a path?
+
+Learner response:
+
+> Yes, a path can be constructed from x to y, the path would be x to u to v to y
+
+Learner's additional justification:
+
+> This is because A is internally connected and B is internally connected
+
+Completed guided review: accepted the construction. The first and last
+sections are existing internal paths, with the new edge between them. The
+disjointness of the stored sets prevents additional shared vertices between
+those sections. This establishes the preservation step being practised.
+The distinction from mere incidence and the empty-input wording were reviewed
+above. The learner supplied the concrete path and generalized connection
+after the recorded focused prompts; this is guided evidence, not independent
+mastery. M01-J3 remains Needs focused review until a fresh assessment succeeds.
+
+#### M01-Q05-R01: Fresh closed-book correctness assessment
+
+Status: completed; explanation accepted after clarification of a mathematical
+misstatement and a neutral request for the required reasoning. M01-J3 Ready.
+Coverage: reassessment of M01-J3 only. Closed-book conditions: question and blank scratch
+paper only, without notes, books, code, search, automated tools, or substantive
+agent help. The task is untimed; hold feedback until both parts are submitted.
+
+A different checker accepts a proposed output when its nonempty returned sets
+contain exactly the input vertices, each appearing once, and each returned
+set is connected using only its own vertices and edges of the input graph.
+
+1. Does passing this checker guarantee that the output is exactly the connected
+   components? Give an argument or counterexample.
+2. Give a general correctness argument for your own implementation. Explain
+   why the properties it maintains establish that the final sets are exactly
+   the connected components for every valid input.
+
+No verdict, counterexample, additional condition, invariant list, or proof
+outline was supplied with this fresh item. The original Q05 result remains
+preserved. The independent response and review follow.
+
+Learner's initial response:
+
+> 1. no, i do not believe this checker guarantees the sets are exactly the connected components. Consider two components A and B which are disjoint and internally connected using the input edges and the verticies within each of them. Thus for x,y in A then {x,y} in E and a,b in B then {a,b} in E. Suppose u,v in V such that u in A and v in B and {u,v} in E. Thus there exists some p in A and q in B such that {u,p} in E and {v,q} in E. Thus the checker rules do not explicitly prevent this case, and the union of A and B is connected thus the output is not exactly the connected components. 2. my implementation constructs the connected components as given {x,y} in E, if x in A and y in B then merge B into A and remove B from the output list. This guarantess the resulting components from the edge set are all connected components. There is then a check for isolated verticies, which puts them into their own component. so for each v in V if v not in C_k for any k where C_k is any currently maintained connected component (namely the components created from the edge sets and any isolated vertex previously processed), then v is put into C_k+1 where C_k+1 is a new component created from the empty set. This guarantees that all vertex exists. The uniqueness of the verticies in the set of components is done through the management of sets when doing the merge and ensuring that isolated vertices create their own component.
+
+Clarification: asked whether the direct-edge statement was an additional
+choice for the counterexample or an asserted consequence of connectivity.
+No replacement property or proof was supplied in that request.
+
+Learner clarification:
+
+> No, that is just a mathematical misstatement. I believe I should have put x~y and a~b. The goal was to show that there exists an edge that the rules would not catch that would join to components in the output thus showing that the rules are not sufficient
+
+Review: accepted the clarified counterexample: two internally connected
+returned groups can have an input edge between them, which the proposed
+checker does not prohibit. Requested the already-required justification for
+the implementation's internal connectivity and absence of split connected
+groups, without supplying the argument.
+
+Learner's completed justification:
+
+> merging two connected sets with a path between the sets remains connected. This is due to transitivity. a connected group can not remain split across different final sets because the processing of each edge guarantees to connect the two sets it's processing. Since we start out at the empty set, after processing the first edge, we have 1 set which is connected, after processing the second set, there will either be 1 connected or 2 disjoint sets where each is internally connected, so on and so forth. after processing every edge, the result will be exactly the n connected components that are present in the edges and the final processing guarantees that the isolated verticies are only added to sets containing themselves
+
+Completed review: accepted the constructive argument. The learner explains
+connectedness under edge-based merging, the progression through processed
+edges, and why all edges are accounted for instead of leaving a connected
+group split. The final loop supplies missing isolated vertices without
+duplicating existing membership. Read "second set" in the processing sequence
+as the second edge in context. The mathematical misstatement was clarified
+by the learner, and the follow-up requested reasoning already required by
+the task; no substantive proof help was supplied during this reassessment.
+
+M01-J3 is Ready at Justify depth. The initial failed assessment and guided
+repair remain separately recorded. Only the open-book application evidence
+for M01-A1 and M01-A3 remains outstanding.
+
+#### M01-Q06: Open-book application, prediction stage
+
+Status: completed and reviewed. Coverage: M01-A1 and M01-A3.
+Notes and owned references are permitted. First submit predictions without
+running code; after they are recorded, compute using the learner's own
+`connected_components` and standard-library support. Do not use a library
+component solver or answer-producing agent help. Hold grading until the
+predictions and subsequent computation/interpretation are both submitted.
+
+Fresh input:
+
+```python
+vertices = ("r1", "r2", "r3", "r4", "r5", "r6", "r7", "r8")
+edges = (
+    ("r1", "r3"), ("r3", "r5"), ("r5", "r1"),
+    ("r5", "r2"), ("r2", "r4"),
+)
+```
+
+Known identity labels:
+
+| Identity | Records |
+|---|---|
+| person-A | r1, r3, r5 |
+| person-B | r2, r4 |
+| person-C | r6, r7 |
+| person-D | r8 |
+
+Before computation, predict the component sets, compare them with the identity
+labels and identify grouping errors, and predict the components after deleting
+edge {r5, r2} and after deleting vertex r5 with its incident edges. Treat the
+deletions independently from the original input and retain all other vertices.
+No component sets or interpretation are supplied before the learner's attempt.
+The computation stage and full readiness judgments remain pending.
+
+Learner predictions (ungraded pending computation and comparison):
+
+> 1. C_0={r1,r3,r5,r2,r4}, C_1={r6}, C_2={r7}, C_3={r8} 2. person-A and person-B are joined together in C_0 and person-C is split between C_1 and C_2. person-D is correct in C_3. 3. C_0 = {r1,r3,r5}, C_1={r2,r4}, C_2={r6}, C_3={r7}, C_4={r8}; {r5,r2} was a bridge and removing it repaired the identity groups person-A and person-B (they were joined with the bridge and no longer joined after the bridge was removed. 4. C_0={r1,r3}, C_1={r2,r4}, C_2={r6}, C_3={r7}, C_4={r8}; removing r5 also separated the identity group for person-A and person-B but r5 is no longer present in the vertex set and thus not in the connected component C_0 (which represents person-A).
+
+Computation stage: use the learner's own function on the original input, the
+independent edge deletion, and the independent vertex deletion. Report actual
+returned Python values and compare them with the recorded predictions, retaining
+the predictions if discrepancies occur. Also check the function's existing
+empty-input and isolated-vertex contract using `((), ())` and `(vertices, ())`;
+state expected behavior from the docstring before running those boundary cases.
+Check that the supplied inputs remain unchanged. No solver, expected outputs,
+implementation changes, or answer-producing agent help were supplied. M01-A1
+and M01-A3 remain Pending until the application evidence is reviewed.
+
+Learner computation results:
+
+```text
+original graph: [{'r4', 'r3', 'r1', 'r2', 'r5'}, {'r6'}, {'r7'}, {'r8'}]
+edge {r5,r2} removed: [{'r3', 'r1', 'r5'}, {'r2', 'r4'}, {'r6'}, {'r7'}, {'r8'}]
+vertex r5 and incident edges removed: [{'r3', 'r1'}, {'r2', 'r4'}, {'r6'}, {'r7'}, {'r8'}]
+empty graph: []
+all vertices without edges: [{'r1'}, {'r2'}, {'r3'}, {'r4'}, {'r5'}, {'r6'}, {'r7'}, {'r8'}]
+```
+
+Review: all five outputs are correct; the first three agree with the learner's
+recorded predictions. The supplied identity interpretation correctly identifies
+the person-A/person-B merge and the person-C split. The edge deletion separates
+the former without repairing the latter; vertex deletion additionally removes
+r5. The boundary outputs satisfy the documented contract. Separate pre-run
+boundary predictions were requested but not submitted; no boundary answers were
+provided before the learner reported the computations.
+
+On the input-preservation follow-up, the learner supplied the actual calls and
+printed inputs after every call. Edge deletion constructs a filtered tuple;
+vertex deletion independently filters the original vertices and edges. All
+five printed input pairs match their supplied values, including the empty and
+all-isolated cases. This confirms input preservation for these cases. No solver,
+implementation assistance, or substantive assessment hints were supplied.
+
+M01-A1 and M01-A3 are Ready at Apply depth. Completion review on 2026-11-21:
+all eight required objectives are Ready; original scenario predictions and
+deletions, four mathematical prompts, selected textbook work, learner
+implementation, previously passing behavioral checks, and model interpretation
+have reviewed evidence. Earlier guided work and independent reassessments remain
+separately recorded. No new code changes or runtime tests were needed for this
+record update. Actual active study time was not measured.
+
+Session stopping point: M01 complete. Next action: prepare M02's local learning
+card and diagnose its prerequisites before assigning work. No unresolved M01
+learning requirement remains; library extensions are separate from core
+completion.

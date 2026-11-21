@@ -78,3 +78,29 @@ def connected_components(
         if not any(vertex in component for component in components):
             components.append({vertex})
     return components
+
+
+vertices = ("r1", "r2", "r3", "r4", "r5", "r6", "r7", "r8")
+edges = (
+    ("r1", "r3"), ("r3", "r5"), ("r5", "r1"),
+    ("r5", "r2"), ("r2", "r4"),
+)
+print("original graph: ", connected_components(vertices, edges))
+print(vertices, edges)
+
+edges_1 = tuple(edge for edge in edges if edge != ("r5", "r2"))
+print("original graph with edge {r5,r2} removed: ", connected_components(vertices, edges_1))
+print(vertices, edges_1)
+
+vertices_cut = tuple(v for v in vertices if v != "r5")
+edges_cut = tuple(edge for edge in edges if "r5" not in edge)
+print("original graph with vertex r5 and it's incident edges removed: ", connected_components(vertices_cut, edges_cut))
+print(vertices_cut, edges_cut)
+
+v = ()
+e = ()
+print("Empty Graph: ", connected_components(v, e))
+print(v, e)
+
+print("All vertices but no edges: ", connected_components(vertices, e))
+print(vertices, e)
